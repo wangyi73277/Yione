@@ -2,7 +2,7 @@
 <html>
     <head>
         <title>Yione</title>
-        <link rel="stylesheet" href="bootstrap.min.css">
+        <link rel="stylesheet" href="assets\css\bootstrap.min.css">
         <link rel="icon" href="/Logo/favicon.ico" type="image/x-icon">
         <style>
             body {
@@ -15,6 +15,16 @@
             a:hover {
                 color: gray;
                 text-decoration: underline;
+            }
+
+            .thumbnail {
+                width: 60%;
+            }
+
+            @media (min-width: 992px) {
+                .thumbnail {
+                    width: 40%;
+                }
             }
         </style>
     </head>
@@ -30,54 +40,66 @@
     </script>
 
     <body>  
-        <div class="container overflow-auto px-1 text-center">
-            <div class="row py-4 align-items-end">
+
+        <div class="container overflow-hidden px-1 text-center">
+            <div class="row align-items-end p-4">
                 <div class="col-4" >
                     <b>Yi Wang</b>
                 </div>
                 <div class="col-4">
-                    <a href="Works.html"><img src="/Logo/Logo.png" width="60" height="60" alt="Yione" class="logo"><br><b>Works</b></a>
+                    <a href="Index.html" ><img src="/Logo/Logo.png" width="60" height="60" alt="Yione" class="logo">
+                    <br><b>Works</b></a>
                 </div>
                 <div class="col-4">
                     <a href="About.html"><b>About</b></a>
                 </div>
             </div> 
+
             <div class="row gy-4">
                 <div class="col-12">
-                    <div class="Porky-Dumplings">
-                        <a href="Porky-Dumplings.html"><img src="images\240000_Porkys-Dumplings\240000_Porkys-Dumplings_Thumbnail.jpg" class="image-fluid" width="40%" alt="Porky-Dumplings"><br>Porky's Dumplings</a>
+                    <div class="Porky-Dumplings Arch">
+                        <a href="porky-dumplings.html"><img src="projects\240000_Porkys-Dumplings\240000_Porkys-Dumplings_Thumbnail.jpg" 
+                            class="image-fluid thumbnail" alt="Porky-Dumplings"><br>Porky's Dumplings</a>
                     </div>
                 </div>
                 <div class="col-12">
-                    <div class="Columbia-Office">
-                        <a href="Columbia-Office.html"><img src="/images/221200_Columbia-Office/221200_Columbia_Thumbnail.jpg" class="image-fluid" width="40%" alt="Columbia-Office"><br>Columbia Office</a>
+                    <div class="Columbia-Office Arch">
+                        <a href="Columbia-Office.html"><img src="/projects/221200_Columbia-Office/221200_Columbia_Thumbnail.jpg" 
+                            class="image-fluid thumbnail" alt="Columbia-Office"><br>Columbia Office</a>
                     </div>
                 </div>
                 <div class="col-12">
-                    <div class="American-Bottom">
-                        <a href="American-Bottom.html"><img src="images\220500_American-Bottom\220500_American-Bottom_Thumbnail.jpg" 
-                            class="image-fluid" width="40%" alt="American-Bottom"><br>American Bottom</a>
+                    <div class="American-Bottom Arch">
+                        <a href="American-Bottom.html"><img src="projects\220500_American-Bottom\220500_American-Bottom_Thumbnail.jpg" 
+                            class="image-fluid thumbnail" alt="American-Bottom"><br>Duo Pavilion</a>
                     </div>
                 </div>
                 <div class="col-12">
-                    <div class="Castlewood-Spa-Center">
-                        <a href="Castlewood-Spa-Center.html"><img src="images\200500_Castlewood-Spa-Center\200500_Castlewood-Spa-Center_Thumbnail.jpg" 
-                            class="image-fluid" width="40%" alt="Castlewood-Spa-Center"><br>Castlewood Spa Center</a>
+                    <div class="Castlewood-Spa-Center Arch">
+                        <a href="Castlewood-Spa-Center.html"><img src="projects\200500_Castlewood-Spa-Center\200500_Castlewood-Spa-Center_Thumbnail.jpg" 
+                            class="image-fluid thumbnail" alt="Castlewood-Spa-Center"><br>Castlewood Spa Center</a>
                     </div>
                 </div>
+                <div class="col-12">
+                    <div class="Venice-Convent Arch">
+                        <a href="Venice-Convent.html"><img src="projects\201200_Venice-Convent\201200_Venice-Convent_Thumbnail.jpg" 
+                            class="image-fluid thumbnail" alt="Castlewood-Spa-Center"><br>Convent in Venice</a>
+                    </div>
+                </div>
+                <!-- <div class="col-12">
+                    <div class="Venice-Convent Arch">
+                        <a href="Castlewood-Spa-Center.html"><img src="projects\200500_Castlewood-Spa-Center\200500_Castlewood-Spa-Center_Thumbnail.jpg" 
+                            class="image-fluid thumbnail" alt="Castlewood-Spa-Center"><br>Convent in Venice</a>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="Venice-Convent Arch">
+                        <a href="Castlewood-Spa-Center.html"><img src="projects\200500_Castlewood-Spa-Center\200500_Castlewood-Spa-Center_Thumbnail.jpg" 
+                            class="image-fluid thumbnail" alt="Castlewood-Spa-Center"><br>Convent in Venice</a>
+                    </div>
+                </div> -->
             </div>
         </div>
-        <!-- <P><em>Under Construction</em></P>
-        <div class="logoFrame">
-            <img src="/Logo/Logo.png" width="120" height="120" alt="Yione" class="logo">
-        </div>
-        
-        <div>
-            <h1 id="designer">Yi Wang</h1>
-
-            <a href="Works.html">Works</a>
-            <a href="About.html">About</a>
-        </div>
-        <script src="bootstrap.min.js"></script> -->
+        <script src="assets\js\bootstrap.bundle.min.js"></script>
     </body>
 </html>
