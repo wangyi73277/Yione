@@ -5,9 +5,8 @@
         <link rel="stylesheet" href="assets\css\bootstrap.min.css">
         <link rel="icon" href="/Logo/favicon.ico" type="image/x-icon">
         <style>
-            body {
-                background-color: #e0e0e0;
-            }
+            body { background-color: #e0e0e0; }
+            
             a {
                 color: black;
                 text-decoration: none;
@@ -19,87 +18,163 @@
 
             .thumbnail {
                 width: 60%;
+                transition: transform 0.3s ease;
+            }
+            .thumbnail:hover { transform: scale(1.05); }
+
+            .project-link {
+                display: block;
+                margin-bottom: 1rem;
+            }
+
+            .project-title {
+                font-size: 1rem;
+                margin-top: 0.5rem;
             }
 
             @media (min-width: 992px) {
-                .thumbnail {
-                    width: 40%;
-                }
+                .thumbnail { width: 40%; }
             }
+
+            .hidden { display: none; }
         </style>
     </head>
     
-        <!-- Google tag (gtag.js) -->
+    <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-RZ3T490TYM"></script>
     <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'G-RZ3T490TYM');
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-RZ3T490TYM');
     </script>
 
     <body>  
-
         <div class="container overflow-hidden px-1 text-center">
-            <div class="row align-items-end p-4">
-                <div class="col-4" >
-                    <b>Yi Wang</b>
+            <nav class="row align-items-end p-4">
+                <div class="col-4"><b>Yi Wang</b></div>
+                <div class="col-4">
+                    <div class="dropdown">
+                        <a href="#works" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                            <img src="/Logo/Logo.png" width="60" height="60" alt="Yione" class="logo">
+                            <br><b>Works</b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#" onclick="showAllProjects()">All</a></li>
+                            <li><a class="dropdown-item" href="#" onclick="filterProjects('Arch')">Architecture</a></li>
+                            <li><a class="dropdown-item" href="#" onclick="filterProjects('ArtTech')">Art+Tech</a></li>
+                        </ul>
+                    </div>
                 </div>
                 <div class="col-4">
-                    <a href="Index.html" ><img src="/Logo/Logo.png" width="60" height="60" alt="Yione" class="logo">
-                    <br><b>Works</b></a>
+                    <a href="#about"><b>About</b></a>
                 </div>
-                <div class="col-4">
-                    <a href="About.html"><b>About</b></a>
-                </div>
-            </div> 
+            </nav>
 
-            <div class="row gy-4">
+            <div id="works" class="row gy-4">
                 <div class="col-12">
                     <div class="Porky-Dumplings Arch">
-                        <a href="porky-dumplings.html"><img src="projects\240000_Porkys-Dumplings\240000_Porkys-Dumplings_Thumbnail.jpg" 
-                            class="image-fluid thumbnail" alt="Porky-Dumplings"><br>Porky's Dumplings</a>
+                        <a href="porky-dumplings.html" class="project-link">
+                            <img src="projects\240000_Porkys-Dumplings\240000_Porkys-Dumplings_Thumbnail.jpg" class="image-fluid thumbnail" alt="Porky-Dumplings">
+                            <h3 class="project-title">Porky's Dumplings</h3>
+                        </a>
                     </div>
                 </div>
                 <div class="col-12">
                     <div class="Columbia-Office Arch">
-                        <a href="Columbia-Office.html"><img src="/projects/221200_Columbia-Office/221200_Columbia_Thumbnail.jpg" 
-                            class="image-fluid thumbnail" alt="Columbia-Office"><br>Columbia Office</a>
+                        <a href="Columbia-Office.html" class="project-link">
+                            <img src="/projects/221200_Columbia-Office/221200_Columbia_Thumbnail.jpg" class="image-fluid thumbnail" alt="Columbia-Office">
+                            <h3 class="project-title">Columbia Office</h3>
+                        </a>
                     </div>
                 </div>
                 <div class="col-12">
                     <div class="American-Bottom Arch">
-                        <a href="American-Bottom.html"><img src="projects\220500_American-Bottom\220500_American-Bottom_Thumbnail.jpg" 
-                            class="image-fluid thumbnail" alt="American-Bottom"><br>Duo Pavilion</a>
+                        <a href="American-Bottom.html" class="project-link">
+                            <img src="projects\220500_American-Bottom\220500_American-Bottom_Thumbnail.jpg" class="image-fluid thumbnail" alt="American-Bottom">
+                            <h3 class="project-title">Duo Pavilion</h3>
+                        </a>
                     </div>
                 </div>
                 <div class="col-12">
                     <div class="Castlewood-Spa-Center Arch">
-                        <a href="Castlewood-Spa-Center.html"><img src="projects\200500_Castlewood-Spa-Center\200500_Castlewood-Spa-Center_Thumbnail.jpg" 
-                            class="image-fluid thumbnail" alt="Castlewood-Spa-Center"><br>Castlewood Spa Center</a>
+                        <a href="Castlewood-Spa-Center.html" class="project-link">
+                            <img src="projects\200500_Castlewood-Spa-Center\200500_Castlewood-Spa-Center_Thumbnail.jpg" class="image-fluid thumbnail" alt="Castlewood-Spa-Center">
+                            <h3 class="project-title">Castlewood Spa Center</h3>
+                        </a>
                     </div>
                 </div>
                 <div class="col-12">
                     <div class="Venice-Convent Arch">
-                        <a href="Venice-Convent.html"><img src="projects\201200_Venice-Convent\201200_Venice-Convent_Thumbnail.jpg" 
-                            class="image-fluid thumbnail" alt="Castlewood-Spa-Center"><br>Convent in Venice</a>
-                    </div>
-                </div>
-                <!-- <div class="col-12">
-                    <div class="Venice-Convent Arch">
-                        <a href="Castlewood-Spa-Center.html"><img src="projects\200500_Castlewood-Spa-Center\200500_Castlewood-Spa-Center_Thumbnail.jpg" 
-                            class="image-fluid thumbnail" alt="Castlewood-Spa-Center"><br>Convent in Venice</a>
+                        <a href="Venice-Convent.html" class="project-link">
+                            <img src="projects\201200_Venice-Convent\201200_Venice-Convent_Thumbnail.jpg" class="image-fluid thumbnail" alt="Venice-Convent">
+                            <h3 class="project-title">Convent in Venice</h3>
+                        </a>
                     </div>
                 </div>
                 <div class="col-12">
-                    <div class="Venice-Convent Arch">
-                        <a href="Castlewood-Spa-Center.html"><img src="projects\200500_Castlewood-Spa-Center\200500_Castlewood-Spa-Center_Thumbnail.jpg" 
-                            class="image-fluid thumbnail" alt="Castlewood-Spa-Center"><br>Convent in Venice</a>
+                    <div class="Portable-Workstation ArtTech">
+                        <a href="Portable-Workstation.html" class="project-link">
+                            <img src="projects\220501_Portable-Workstation\220501_Portable-Workstation-Thumbnail.jpg" class="image-fluid thumbnail" alt="Portable-Workstation">
+                            <h3 class="project-title">Portable Workstation</h3>
+                        </a>
                     </div>
-                </div> -->
+                </div>
+                <div class="col-12">
+                    <div class="Macbeth-in-zerg ArtTech">
+                        <a href="Macbeth-in-zerg.html" class="project-link">
+                            <img src="projects\221210_Macbeth-of-Zerg\221210_Macbeth-of-zerg-thumbnail.jpg" class="image-fluid thumbnail" alt="macbeth-in-zerg-GANs-in-design">
+                            <h3 class="project-title">Macbeth in Zerg</h3>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="Body-as-Site ArtTech">
+                        <a href="body-as-site.html" class="project-link">
+                            <img src="projects\200510_Body-as-site\200510_body-as-site-thumbnail.jpg" class="image-fluid thumbnail" alt="body-as-site-jewlery-design">
+                            <h3 class="project-title">Body as Site</h3>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="Stilllife-afterlife ArtTech">
+                        <a href="stilllife-afterlife.html" class="project-link">
+                            <img src="projects\190510_Stilllife-Afterlife\190510_stilllife-afterlife-thumbnail.jpg" class="image-fluid thumbnail" alt="stilllife-afterlife-art">
+                            <h3 class="project-title">Still Life & After Life</h3>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="xyz ArtTech">
+                        <a href="xyz.html" class="project-link">
+                            <img src="projects\181210_XYZ\181210_XYZ_thumbnail.jpg" class="image-fluid thumbnail" alt="xyz-art">
+                            <h3 class="project-title">X-Y-Z</h3>
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
+
         <script src="assets\js\bootstrap.bundle.min.js"></script>
+        <script>
+            function filterProjects(category) {
+                const projects = document.querySelectorAll('.Arch, .ArtTech');
+                projects.forEach(project => {
+                    if (project.classList.contains(category)) {
+                        project.closest('.col-12').style.display = 'block';
+                    } else {
+                        project.closest('.col-12').style.display = 'none';
+                    }
+                });
+            }
+
+            const showAllProjects = () => {
+                document.querySelectorAll('.Arch, .ArtTech').forEach(project => {
+                    project.closest('.col-12').style.display = 'block';
+                });
+            }
+
+            window.onload = showAllProjects;
+        </script>
     </body>
 </html>
