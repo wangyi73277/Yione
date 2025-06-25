@@ -2,9 +2,128 @@
 <html>
     <head>
         <title>Yione</title>
+        <link rel="stylesheet" href="assets\css\bootstrap.min.css">
+        <link rel="icon" href="/Logo/favicon.ico" type="image/x-icon">
+        <style>
+            body { background-color: #e0e0e0; }
+            
+            a {
+                color: black;
+                text-decoration: none;
+            }
+            a:hover {
+                color: gray;
+                text-decoration: underline;
+            }
+
+            .thumbnail {
+                width: 60%;
+                transition: transform 0.3s ease;
+            }
+            .thumbnail:hover { transform: scale(1.05); }
+
+            .project-link {
+                display: block;
+                margin-bottom: 1rem;
+            }
+
+            .project-title {
+                font-size: 1rem;
+                margin-top: 0.5rem;
+            }
+
+            @media (min-width: 992px) {
+                .thumbnail { width: 40%; }
+            }
+
+            .hidden { display: none; }
+        </style>
     </head>
-    <body>
-        <P><em>Under Construction</em></P>
+    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RZ3T490TYM"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-RZ3T490TYM');
+    </script>
+
+    <body>  
+        <div class="container overflow-hidden px-1 text-center">
+            <nav class="row align-items-end p-4">
+                <div class="col-4"><b>Studio Yione</b></div>
+                <div class="col-4">
+                    <div class="dropdown">
+                        <a href="index.html" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                            <img src="/Logo/Logo.png" width="60" height="60" alt="Yione" class="logo">
+                            <br><b>Works</b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#" onclick="showAllProjects()">All</a></li>
+                            <li><a class="dropdown-item" href="#" onclick="filterProjects('Arch')">Architecture</a></li>
+                            <li><a class="dropdown-item" href="#" onclick="filterProjects('ArtTech')">Art+Tech</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <a href="About.html"><b>About</b></a>
+                </div>
+            </nav>
+        </div>
+
+        <div class="container overflow-hidden px-1">
+            <div class="row">
+                <div class="col-6">
+                <b>
+                 Studio Yione is an architectural practice based in New York, USA.
+                </b>
+                <br><br>
+                <p>
+                Yione is an architectural practice based in New York, USA.
+                </p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-4">
+                    <b>Address</b>
+                    <p>
+                        368 Eastern Parkway, Brooklyn, NY 11225
+                    </p>
+                </div>
+                <div class="col-4">
+                    <p>
+                        <b>Get in touch</b>
+                        <br>
+                        314 906 6118
+                        <br>
+                        <a href="mailto:studioyione@gmail.com" style="text-decoration: underline">studioyione@gmail.com</a>
+                        <br>
+                        <br>
+                        <b>Follow us</b>
+                        <a href="https://www.instagram.com/yione_studio/" style="text-decoration: underline">Instagram</a>
+                    </p>
+
+                </div>
+            </div>
+
+            <div class="row">
+                <p>
+                    <b>Award</b>
+                    <br>
+                </p>
+
+                <div class="row">
+                    <b>2025</b>
+                <div class="col-3">
+                        <p>Staggering of Urban Lifestyles</p>
+                </div>
+                <div class="col-9">
+                    <p>
+                        Metal in Construction 2025 Design Challenge-Grand Prize
+                    </p>
+                </div>
+            </div>
     </body>
 </html>
-

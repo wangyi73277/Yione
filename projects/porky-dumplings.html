@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Yione</title>
+        <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+        <link rel="icon" href="/Logo/favicon.ico" type="image/x-icon">
+        <style>
+            body { background-color: #e0e0e0; }
+            
+            a {
+                color: black;
+                text-decoration: none;
+            }
+            a:hover {
+                color: gray;
+                text-decoration: underline;
+            }
+
+            .thumbnail {
+                width: 60%;
+                transition: transform 0.3s ease;
+            }
+            .thumbnail:hover { transform: scale(1.05); }
+
+            .project-link {
+                display: block;
+                margin-bottom: 1rem;
+            }
+
+            .project-title {
+                font-size: 1rem;
+                margin-top: 0.5rem;
+            }
+
+            @media (min-width: 992px) {
+                .thumbnail { width: 40%; }
+            }
+
+            .hidden { display: none; }
+
+            .info-panel {
+                position: fixed;
+                bottom: 20px;
+                left: 20px;
+                background-color: rgba(224, 224, 224, 0.6);
+                padding: 20px;
+                border-radius: 5px;
+                width: 100%;
+                max-width: 400px;
+                z-index: 1000;
+            }
+
+            .info-panel p {
+                color: black;
+                margin-bottom: 0.5rem;
+                font-size: 0.9rem;
+            }
+
+            hr {
+                height: 1px; /* Thickness of the line */
+                background: #000; /* Color of the line */
+                margin: px; /* Space above and below the line */
+            }
+
+            .modal {
+                pointer-events: none; /* Allow scrolling through the modal */
+            }
+            .modal-content {
+                pointer-events: auto; /* Re-enable interactions for modal content */
+            }
+        </style>
+    </head>
+    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RZ3T490TYM"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-RZ3T490TYM');
+    </script>
+
+    <body>  
+        <div class="container overflow-hidden px-1 text-center">
+            <nav class="row align-items-end p-4">
+                <div class="col-4"><b>Studio Yione</b></div>
+                <div class="col-4">
+                    <div class="dropdown">
+                        <a href="../index.html" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                            <img src="/Logo/Logo.png" width="60" height="60" alt="Yione" class="logo">
+                            <br><b>Works</b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#" onclick="showAllProjects()">All</a></li>
+                            <li><a class="dropdown-item" href="#" onclick="filterProjects('Arch')">Architecture</a></li>
+                            <li><a class="dropdown-item" href="#" onclick="filterProjects('ArtTech')">Art+Tech</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <a href="../About.html"><b>About</b></a>
+                </div>
+            </nav>
+        </div>
+
+        <div class="info-panel" id="info-panel">
+            <div class="row">
+                <div class="col-6">
+                    <p>Porky's Dumplings</p>
+                </div>
+                <div class="col-3">
+                    <p><a href="#" onclick="showInfo()" style="color: black; text-decoration: none;">info</a></p>
+                    <div id="infoModal" class="modal" style="display: none; float:left; top: 15%; left: 20px; width: 100%; height: 100%; z-index: 2000;">
+                        <div class="modal-content" style="background-color: rgba(224, 224, 224, 0.6); border: 0px; margin:0; padding: 20px; width: 100%; max-width: 400px; border-radius: 5px;">
+                            <span onclick="closeInfo()" style="float: right; cursor: pointer; text-align: right;">&times;</span>
+                            
+                            <p>Location: St. Louis, Missouri<br>
+                            <hr>
+                            Year: 2024<br>
+                            <hr>
+                            Type: Restaurant Innovation</p>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <p><a href="#" onclick="showStory()" style="color: black; text-decoration: none;">story</a></p>
+                    <div id="storyModal" class="modal" style="display: none; float:left; top: 15%; left: 20px; width: 100%; height: 100%; z-index: 2000;">
+                        <div class="modal-content" style="background-color: rgba(224, 224, 224, 0.6); border: 0px; margin:0; padding: 20px; width: 100%; max-width: 400px; border-radius: 5px;">
+                            <span onclick="closeStory()" style="float: right; cursor: pointer; text-align: right;">&times;</span>
+                            
+                            <p>Porky’s Dumplings, located in St. Louis, is the vision of two young ambitious entrepreneurs expanding their family’s hospitality business. The restaurant was remodeled from a former catering space with a focus on minimizing construction time as the top priority. To accelerate the process, We retained the existing ceiling and incorporated a variety of wallpapers for efficient yet visually engaging finishes.
+
+                            <br><br>A partition wall separates the dining area from the expansive parking lot in front of the restaurant, creating a sanctuary for diners. Through the opening, passersby can see all the way to the bar’s feature wall, drawing them in to explore the space. The dining space is redefined by draped fabric and a fabric-wrapped feature wall, adding softness and intimacy to the atmosphere.
+                            
+                            <br><br>Throughout the dining area, circular design elements subtly reference the restaurant’s signature dish—the soup dumplings, the motif is reflected in lanterns, table lamps, sconces, pendants, and the accent wall behind the bar, reinforcing the culinary identity of Porky’s Dumplings.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <span onclick="closeInfoPanel()" style="position: absolute; top: 50%; right: 20px; transform: translateY(-50%); cursor: pointer; color: black;">&times;</span>
+        </div>
+
+        <script>
+            function closeInfoPanel() {
+                document.getElementById('info-panel').style.display = 'none';
+            }
+
+            function showInfo() {
+                document.getElementById('infoModal').style.display = 'block';
+            }
+            
+            function closeInfo() {
+                document.getElementById('infoModal').style.display = 'none';
+            }
+            
+            function showStory() {
+                document.getElementById('storyModal').style.display = 'block';
+            }
+            
+            function closeStory() {
+                document.getElementById('storyModal').style.display = 'none';
+            }
+        </script>
+
+        <div style="display: flex; overflow-x: auto; overflow-y: hidden; height: 90vh; justify-content: flex-start; align-items: center; " onwheel="event.preventDefault(); this.scrollLeft += event.deltaY;">
+            <img src="/Projects/240000_Porkys-Dumplings/01_Yione_Porkys-Dumplings_storefront.jpg" style="height: 100%; object-fit: contain; margin-right: 5rem">
+            <img src="/Projects/240000_Porkys-Dumplings/02_Yione_Porkys-Dumplings_entry.jpg" style="height: 80%; object-fit: contain; margin:5rem">
+            <img src="/Projects/240000_Porkys-Dumplings/03_Yione_Porkys-Dumplings_dining.jpg" style="height: 50%; object-fit: contain; margin:10rem">
+            <img src="/Projects/240000_Porkys-Dumplings/04_Yione_Porkys-Dumplings_dining.jpg" style="height: 80%; object-fit: contain; margin:5rem">
+            <img src="/Projects/240000_Porkys-Dumplings/05_Yione_Porkys-Dumplings_dining.jpg" style="height: 80%; object-fit: contain; margin:5rem">
+            <img src="/Projects/240000_Porkys-Dumplings/07_Yione_Porkys-Dumplings_dining.jpg" style="height: 50%; object-fit: contain; margin:10rem">
+            <img src="/Projects/240000_Porkys-Dumplings/08_Yione_Porkys-Dumplings_bar.jpg" style="height: 50%; object-fit: contain; margin:10rem">
+            <img src="/Projects/240000_Porkys-Dumplings/09_Yione_Porkys-Dumplings_exterior.jpg" style="height: 100%; object-fit: contain; margin-left:10rem">
+        </div>
+
+    </body>
+</html>
