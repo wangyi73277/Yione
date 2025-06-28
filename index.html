@@ -130,8 +130,8 @@
                         </a>
                     </div>
                 </div>
-                <div class="col-12" id="darkModeStart">
-                    <div class="Portable-Workstation ArtTech">
+                <div class="col-12">
+                    <div class="Portable-Workstation ArtTech" id="darkModeStart">
                         <a href="projects/Portable-Workstation.html" class="project-link">
                             <img src="projects\220501_Portable-Workstation\00_Yione_Portable-Workstation-Thumbnail.jpg" class="image-fluid thumbnail" alt="Portable-Workstation">
                             <h3 class="project-title">Portable Workstation</h3>
@@ -172,7 +172,6 @@
                 </div>
             </div>
         </div>
-
         <script src="assets\js\bootstrap.bundle.min.js"></script>
         <script>
             function filterProjects(category) {
@@ -194,20 +193,34 @@
 
             window.onload = showAllProjects;
 
-            // Dark mode implementation
-            window.addEventListener('scroll', () => {
-                const darkModeStart = document.getElementById('darkModeStart');
-                if (darkModeStart) {
-                    const rect = darkModeStart.getBoundingClientRect();
-                    if (rect.top <= window.innerHeight && rect.bottom >= 0) {
-                        document.body.classList.add('dark-mode');
-                        document.querySelector('.light-mode-logo').style.display = 'none';
-                        document.querySelector('.dark-mode-logo').style.display = 'inline';
-                    } else if (rect.top > window.innerHeight) {
-                        document.body.classList.remove('dark-mode');
-                        document.querySelector('.light-mode-logo').style.display = 'inline';
-                        document.querySelector('.dark-mode-logo').style.display = 'none';
-                    }
+            // Dark/Light mode implementation
+            const archProjects = document.querySelectorAll('.Arch');
+            const artTechProjects = document.querySelectorAll('.ArtTech');
+
+            // Handle Arch projects (Light mode)
+            archProjects.forEach(project => {
+                project.addEventListener('mouseenter', () => {
+                    document.body.classList.remove('dark-mode');
+                    document.querySelector('.light-mode-logo').style.display = 'inline';
+                    document.querySelector('.dark-mode-logo').style.display = 'none';
+                });
+            });
+
+            // Handle ArtTech projects (Dark mode)
+            artTechProjects.forEach(project => {
+                project.addEventListener('mouseenter', () => {
+                    document.body.classList.add('dark-mode');
+                    document.querySelector('.light-mode-logo').style.display = 'none';
+                    document.querySelector('.dark-mode-logo').style.display = 'inline';
+                });
+            });
+
+            // Default state when mouse leaves any project
+            document.addEventListener('mouseover', (e) => {
+                if (!e.target.closest('.Arch') && !e.target.closest('.ArtTech')) {
+                    document.body.classList.remove('dark-mode');
+                    document.querySelector('.light-mode-logo').style.display = 'inline';
+                    document.querySelector('.dark-mode-logo').style.display = 'none';
                 }
             });
         </script>
