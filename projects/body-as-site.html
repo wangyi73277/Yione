@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Yione</title>
+        <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+        <link rel="icon" href="/Logo/favicon.ico" type="image/x-icon">
+        <style>
+            body { background-color: #c2dfe5; }
+            
+            a {
+                color: black;
+                text-decoration: none;
+            }
+            a:hover {
+                color: gray;
+                text-decoration: underline;
+            }
+
+            .thumbnail {
+                width: 60%;
+                transition: transform 0.3s ease;
+            }
+            .thumbnail:hover { transform: scale(1.05); }
+
+            .project-link {
+                display: block;
+                margin-bottom: 1rem;
+            }
+
+            .project-title {
+                font-size: 1rem;
+                margin-top: 0.5rem;
+            }
+
+            @media (min-width: 992px) {
+                .thumbnail { width: 40%; }
+            }
+
+            .hidden { display: none; }
+
+            .info-panel {
+                position: fixed;
+                bottom: 20px;
+                left: 20px;
+                background-color: rgba(224, 224, 224, 0.6);
+                padding: 20px;
+                border-radius: 5px;
+                width: 100%;
+                max-width: 400px;
+                z-index: 1000;
+            }
+
+            .info-panel p {
+                color: black;
+                margin-bottom: 0.5rem;
+                font-size: 0.9rem;
+            }
+
+            hr {
+                height: 1px; /* Thickness of the line */
+                background: #000; /* Color of the line */
+                margin: px; /* Space above and below the line */
+            }
+
+            .modal {
+                pointer-events: none; /* Allow scrolling through the modal */
+            }
+            .modal-content {
+                pointer-events: auto; /* Re-enable interactions for modal content */
+            }
+        </style>
+    </head>
+    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RZ3T490TYM"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-RZ3T490TYM');
+    </script>
+
+    <body>  
+        <div class="container overflow-hidden px-1 text-center">
+            <nav class="row align-items-end p-4">
+                <div class="col-4" style="color: black"><b>Studio Yione</b></div>
+                <div class="col-4">
+                    <div class="dropdown">
+                        <a href="../index.html" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                            <img src="/Logo/Logo.png" width="60" height="60" alt="Yione" class="logo">
+                            <br><b>Works</b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#" onclick="showAllProjects()">All</a></li>
+                            <li><a class="dropdown-item" href="#" onclick="filterProjects('Arch')">Architecture</a></li>
+                            <li><a class="dropdown-item" href="#" onclick="filterProjects('ArtTech')">Art+Tech</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <a href="../About.html"><b>About</b></a>
+                </div>
+            </nav>
+        </div>
+
+        <div class="info-panel" id="info-panel">
+            <div class="row">
+                <div class="col-6">
+                    <p>Body as Site</p>
+                </div>
+                <div class="col-3">
+                    <p><a href="#" onclick="showInfo()" style="color: black; text-decoration: none;">info</a></p>
+                    <div id="infoModal" class="modal" style="display: none; float:left; top: 12%; left: 20px; width: 100%; height: 100%; z-index: 2000;">
+                        <div class="modal-content" style="background-color: rgba(224, 224, 224, 0.6); border: 0px; margin:0; padding: 20px; width: 100%; max-width: 400px; border-radius: 5px;">
+                            <span onclick="closeInfo()" style="float: right; cursor: pointer; text-align: right;">&times;</span>
+                            
+                            Year: 2020<br>
+                            <hr>
+                            Type: Jewlery Design</p>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <p><a href="#" onclick="showStory()" style="color: black; text-decoration: none;">story</a></p>
+                    <div id="storyModal" class="modal" style="display: none; float:left; top: 12%; left: 20px; width: 100%; height: 100%; z-index: 2000;">
+                        <div class="modal-content" style="background-color: rgba(224, 224, 224, 0.6); border: 0px; margin:0; padding: 20px; width: 100%; max-width: 400px; border-radius: 5px;">
+                            <span onclick="closeStory()" style="float: right; cursor: pointer; text-align: right;">&times;</span>
+                            
+                            <p>Our bodies operate intelligently and unconsciously—we rarely notice their complexity until something goes wrong. We take it for granted that the body will follow the brain’s commands, which often leads us to neglect our health. The skin, while beautifully designed to protect our internal organs, also conceals them, further distancing us from an awareness of the body’s inner workings.
+
+                            <br><br>For people with disabilities, assistive devices like glasses, hearing aids, and braces make the body’s needs more visible. This visibility is where my design begins.
+
+                            <br><br>The concept originated from sculptural studies using Q-tip models and evolved through a visual language developed from my renderings. The jewelry collection consists of three pieces—<i>Homer</i>, <i>Pharaoh</i>, and <i>Lucia</i>—which function as decorative exoskeletons. Looking ahead, these pieces could serve not only as adornment but as platforms for wearable devices that monitor the body’s internal systems.
+                            
+                        </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <span onclick="closeInfoPanel()" style="position: absolute; top: 50%; right: 20px; transform: translateY(-50%); cursor: pointer; color: black;">&times;</span>
+        </div>
+
+        <script>
+            function closeInfoPanel() {
+                document.getElementById('info-panel').style.display = 'none';
+                window.location.href = '../index.html';
+            }
+
+            function showInfo() {
+                document.getElementById('infoModal').style.display = 'block';
+            }
+            
+            function closeInfo() {
+                document.getElementById('infoModal').style.display = 'none';
+            }
+            
+            function showStory() {
+                document.getElementById('storyModal').style.display = 'block';
+            }
+            
+            function closeStory() {
+                document.getElementById('storyModal').style.display = 'none';
+            }
+        </script>
+
+        <div style="display: flex; overflow-x: auto; overflow-y: hidden; height: 90vh; justify-content: flex-start; align-items: center; " onwheel="event.preventDefault(); this.scrollLeft += event.deltaY;">
+            <img src="200510_Body-as-Site/01_Yione_Body-as-Site.jpg" style="height: 50%; object-fit: contain; margin-left: 15rem; margin-right: 10rem;">
+            <img src="200510_Body-as-Site/02_Yione_Body-as-Site.jpg" style="height: 80%; object-fit: contain; margin: 5rem;">
+
+            <img src="200510_Body-as-Site/05_Yione_body-as-site_Homer.jpg" style="height: 30%; object-fit: contain; margin: 10rem;">
+            <img src="200510_Body-as-Site/08_Yione_body-as-site_Homer.jpg" style="height: 80%; object-fit: contain; margin: 5rem;">
+            <img src="200510_Body-as-Site/09_Yione_body-as-site_Homer.jpg" style="height: 50%; object-fit: contain; margin: 5rem;">
+            <img src="200510_Body-as-Site/10_Yione_body-as-site_Homer.jpg" style="height: 50%; object-fit: contain; margin: 5rem;">
+            <img src="200510_Body-as-Site/11_Yione_body-as-site_Homer.jpg" style="height: 80%; object-fit: contain; margin-left: 10rem; margin-right: 5rem;">
+            <img src="200510_Body-as-Site/12_Yione_body-as-site_Homer.jpg" style="height: 50%; object-fit: contain; margin: 5rem;">
+            <img src="200510_Body-as-Site/13_Yione_body-as-site_Homer.jpg" style="height: 50%; object-fit: contain; margin: 5rem;">
+            
+            <img src="200510_Body-as-Site/06_Yione_body-as-site_Pharaoh.jpg" style="height: 30%; object-fit: contain; margin: 10rem;">
+            <img src="200510_Body-as-Site/14_Yione_body-as-site_Pharaoh.jpg" style="height: 80%; object-fit: contain; margin: 5rem;">
+            <img src="200510_Body-as-Site/15_Yione_body-as-site_Pharaoh.jpg" style="height: 50%; object-fit: contain; margin: 5rem;">
+            <img src="200510_Body-as-Site/16_Yione_body-as-site_Pharaoh.jpg" style="height: 50%; object-fit: contain; margin: 5rem;">
+            <img src="200510_Body-as-Site/17_Yione_body-as-site_Pharaoh.jpg" style="height: 80%; object-fit: contain; margin-left: 10rem; margin-right: 5rem;">
+            <img src="200510_Body-as-Site/18_Yione_body-as-site_Pharaoh.jpg" style="height: 50%; object-fit: contain; margin: 5rem;">
+            <img src="200510_Body-as-Site/19_Yione_body-as-site_Pharaoh.jpg" style="height: 50%; object-fit: contain; margin: 5rem;">
+
+            <img src="200510_Body-as-Site/07_Yione_body-as-site_Lucia.jpg" style="height: 30%; object-fit: contain; margin: 10rem;">
+            <img src="200510_Body-as-Site/20_Yione_body-as-site_Lucia.jpg" style="height: 80%; object-fit: contain; margin: 5rem;">
+            <img src="200510_Body-as-Site/21_Yione_body-as-site_Lucia.jpg" style="height: 50%; object-fit: contain; margin: 5rem;">
+            <img src="200510_Body-as-Site/22_Yione_body-as-site_Lucia.jpg" style="height: 50%; object-fit: contain; margin: 5rem;">
+            <img src="200510_Body-as-Site/23_Yione_body-as-site_Lucia.jpg" style="height: 80%; object-fit: contain; margin-left: 10rem; margin-right: 5rem;">
+            <img src="200510_Body-as-Site/24_Yione_body-as-site_Lucia.jpg" style="height: 50%; object-fit: contain; margin: 5rem;">
+            <img src="200510_Body-as-Site/25_Yione_body-as-site_Lucia.jpg" style="height: 50%; object-fit: contain; margin: 5rem;">
+
+            <img src="200510_Body-as-Site/03_Yione_Body-as-Site.jpg" style="height: 80%; object-fit: contain; margin-left: 10rem; margin-right: 5rem;">
+            <img src="200510_Body-as-Site/04_Yione_Body-as-Site.jpg" style="height: 50%; object-fit: contain; margin: 10rem;">
+        </div>
+
+    </body>
+</html>
