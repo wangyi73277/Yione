@@ -68,6 +68,16 @@
             .modal-content {
                 pointer-events: auto; /* Re-enable interactions for modal content */
             }
+            footer {
+                position: fixed;
+                bottom: 20px;
+                right: 20px;
+                text-align: right;
+                font-size: 0.9rem;
+                color: #666;
+                padding: 1em;
+                z-index: 1000;
+            }
         </style>
     </head>
     
@@ -81,27 +91,29 @@
     </script>
 
     <body>  
-        <div class="container overflow-hidden px-1 text-center">
-            <nav class="row align-items-end p-4">
-                <div class="col-4" style="color: black"><b>Studio Yione</b></div>
-                <div class="col-4">
-                    <div class="dropdown">
-                        <a href="../index.html" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                            <img src="/Logo/Logo.png" width="60" height="60" alt="Yione" class="logo">
-                            <br><b>Works</b>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#" onclick="showAllProjects()">All</a></li>
-                            <li><a class="dropdown-item" href="#" onclick="filterProjects('Arch')">Architecture</a></li>
-                            <li><a class="dropdown-item" href="#" onclick="filterProjects('ArtTech')">Art+Tech</a></li>
-                        </ul>
+        <header>
+            <div class="container overflow-hidden px-1 text-center">
+                <nav class="row align-items-end p-4">
+                    <div class="col-4" style="color: black"><b>Studio Yione</b></div>
+                    <div class="col-4">
+                        <div class="dropdown">
+                            <a href="../index.html" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                                <img src="/Logo/Logo.png" width="60" height="60" alt="Yione" class="logo">
+                                <br><b>Works</b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#" onclick="showAllProjects()">All</a></li>
+                                <li><a class="dropdown-item" href="#" onclick="filterProjects('Arch')">Architecture</a></li>
+                                <li><a class="dropdown-item" href="#" onclick="filterProjects('ArtTech')">Art+Tech</a></li>
+                            </ul>
+                        </div>
                     </div>
-                </div>
-                <div class="col-4">
-                    <a href="../About.html"><b>About</b></a>
-                </div>
-            </nav>
-        </div>
+                    <div class="col-4">
+                        <a href="../About.html"><b>About</b></a>
+                    </div>
+                </nav>
+            </div>
+        </header>
 
         <div class="info-panel" id="info-panel">
             <div class="row">
@@ -127,11 +139,11 @@
                         <div class="modal-content" style="background-color: rgba(224, 224, 224, 0.6); border: 0px; margin:0; padding: 20px; width: 100%; max-width: 400px; border-radius: 5px;">
                             <span onclick="closeStory()" style="float: right; cursor: pointer; text-align: right;">&times;</span>
                             
-                            <p>Our bodies operate intelligently and unconsciously—we rarely notice their complexity until something goes wrong. We take it for granted that the body will follow the brain’s commands, which often leads us to neglect our health. The skin, while beautifully designed to protect our internal organs, also conceals them, further distancing us from an awareness of the body’s inner workings.
+                            <p>Our bodies operate intelligently and unconsciously—we rarely notice their complexity until something goes wrong. We take it for granted that the body will follow the brain's commands, which often leads us to neglect our health. The skin, while beautifully designed to protect our internal organs, also conceals them, further distancing us from an awareness of the body's inner workings.
 
-                            <br><br>For people with disabilities, assistive devices like glasses, hearing aids, and braces make the body’s needs more visible. This visibility is where my design begins.
+                            <br><br>For people with disabilities, assistive devices like glasses, hearing aids, and braces make the body's needs more visible. This visibility is where my design begins.
 
-                            <br><br>The concept originated from sculptural studies using Q-tip models and evolved through a visual language developed from my renderings. The jewelry collection consists of three pieces—<i>Homer</i>, <i>Pharaoh</i>, and <i>Lucia</i>—which function as decorative exoskeletons. Looking ahead, these pieces could serve not only as adornment but as platforms for wearable devices that monitor the body’s internal systems.
+                            <br><br>The concept originated from sculptural studies using Q-tip models and evolved through a visual language developed from my renderings. The jewelry collection consists of three pieces—<i>Homer</i>, <i>Pharaoh</i>, and <i>Lucia</i>—which function as decorative exoskeletons. Looking ahead, these pieces could serve not only as adornment but as platforms for wearable devices that monitor the body's internal systems.
                             
                         </p>
                         </div>
@@ -141,28 +153,6 @@
             <span onclick="closeInfoPanel()" style="position: absolute; top: 50%; right: 20px; transform: translateY(-50%); cursor: pointer; color: black;">&times;</span>
         </div>
 
-        <script>
-            function closeInfoPanel() {
-                document.getElementById('info-panel').style.display = 'none';
-                window.location.href = '../index.html';
-            }
-
-            function showInfo() {
-                document.getElementById('infoModal').style.display = 'block';
-            }
-            
-            function closeInfo() {
-                document.getElementById('infoModal').style.display = 'none';
-            }
-            
-            function showStory() {
-                document.getElementById('storyModal').style.display = 'block';
-            }
-            
-            function closeStory() {
-                document.getElementById('storyModal').style.display = 'none';
-            }
-        </script>
 
         <div style="display: flex; overflow-x: auto; overflow-y: hidden; height: 90vh; justify-content: flex-start; align-items: center; " onwheel="event.preventDefault(); this.scrollLeft += event.deltaY;">
             <img src="200510_Body-as-Site\01_Yione_Body-as-Site.jpg" style="height: 50%; object-fit: contain; margin-left: 15rem; margin-right: 10rem;">
@@ -194,7 +184,38 @@
 
             <img src="200510_Body-as-Site/03_Yione_Body-as-Site.jpg" style="height: 80%; object-fit: contain; margin-left: 10rem; margin-right: 5rem;">
             <img src="200510_Body-as-Site/04_Yione_Body-as-Site.jpg" style="height: 50%; object-fit: contain; margin: 10rem;">
+            
         </div>
+
+        
+        <footer>
+            <p>© 2025 Studio Yione</p>
+        </footer>
+
+        
+
+        <script>
+            function closeInfoPanel() {
+                document.getElementById('info-panel').style.display = 'none';
+                window.location.href = '../index.html';
+            }
+
+            function showInfo() {
+                document.getElementById('infoModal').style.display = 'block';
+            }
+            
+            function closeInfo() {
+                document.getElementById('infoModal').style.display = 'none';
+            }
+            
+            function showStory() {
+                document.getElementById('storyModal').style.display = 'block';
+            }
+            
+            function closeStory() {
+                document.getElementById('storyModal').style.display = 'none';
+            }
+        </script>
 
     </body>
 </html>
