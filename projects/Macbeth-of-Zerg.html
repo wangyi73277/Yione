@@ -40,8 +40,8 @@
 
             .info-panel {
                 position: fixed;
-                bottom: 20px;
-                left: 20px;
+                bottom: 25px;
+                left: 25px;
                 background-color: rgba(224, 224, 224, 0.6);
                 padding: 20px;
                 border-radius: 5px;
@@ -68,6 +68,16 @@
             .modal-content {
                 pointer-events: auto; /* Re-enable interactions for modal content */
             }
+            footer {
+                position: fixed;
+                bottom: 5px;
+                left: 25px;
+                font-size: 0.9rem;
+                text-align: left;
+                color: #666;
+                padding: 0em;
+                z-index: 1000;
+            }
         </style>
     </head>
     
@@ -81,64 +91,185 @@
     </script>
 
     <body>  
-        <div class="container overflow-hidden px-1 text-center">
-            <nav class="row align-items-end p-4">
-                <div class="col-4" style="color: white;"><b>Studio Yione</b></div>
-                <div class="col-4">
-                    <div class="dropdown">
-                        <a href="../index.html" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                            <img src="/Logo/Logo_white.png" width="60" height="60" alt="Yione" class="logo">
-                            <br><b>Works</b>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#" onclick="showAllProjects()">All</a></li>
-                            <li><a class="dropdown-item" href="#" onclick="filterProjects('Arch')">Architecture</a></li>
-                            <li><a class="dropdown-item" href="#" onclick="filterProjects('ArtTech')">Art+Tech</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-4">
-                    <a href="../About.html"><b>About</b></a>
-                </div>
-            </nav>
-        </div>
-
-        <div class="info-panel" id="info-panel">
-            <div class="row">
-                <div class="col-6">
-                    <p>Macbeth in Zerg</p>
-                </div>
-                <div class="col-3">
-                    <p><a href="#" onclick="showInfo()" style="color: black; text-decoration: none;">info</a></p>
-                    <div id="infoModal" class="modal" style="display: none; float:left; top: 12%; left: 20px; width: 100%; height: 100%; z-index: 2000;">
-                        <div class="modal-content" style="background-color: rgba(224, 224, 224, 0.6); border: 0px; margin:0; padding: 20px; width: 100%; max-width: 400px; border-radius: 5px;">
-                            <span onclick="closeInfo()" style="float: right; cursor: pointer; text-align: right;">&times;</span>
-                            
-                            Year: 2020<br>
-                            <hr>
-                            Technologies: RunwayML, Photogrammetry, Google Colab, zBrush</p>
-                            
+        <header>
+            <div class="container overflow-hidden px-1 text-center">
+                <nav class="row align-items-end p-4">
+                    <div class="col-4" style="color: white;"><b>Studio Yione</b></div>
+                    <div class="col-4">
+                        <div class="dropdown">
+                            <a href="../index.html" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                                <img src="/Logo/Logo_white.png" width="60" height="60" alt="Yione" class="logo">
+                                <br><b>Works</b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#" onclick="showAllProjects()">All</a></li>
+                                <li><a class="dropdown-item" href="#" onclick="filterProjects('Arch')">Architecture</a></li>
+                                <li><a class="dropdown-item" href="#" onclick="filterProjects('ArtTech')">Art+Tech</a></li>
+                            </ul>
                         </div>
                     </div>
-                </div>
-                <div class="col-3">
-                    <p><a href="#" onclick="showStory()" style="color: black; text-decoration: none;">story</a></p>
-                    <div id="storyModal" class="modal" style="display: none; float:left; top: 12%; left: 20px; width: 100%; height: 100%; z-index: 2000;">
-                        <div class="modal-content" style="background-color: rgba(224, 224, 224, 0.6); border: 0px; margin:0; padding: 20px; width: 100%; max-width: 400px; border-radius: 5px;">
-                            <span onclick="closeStory()" style="float: right; cursor: pointer; text-align: right;">&times;</span>
-                            
-                            <p>Machine learning engages graphic information differently than designers do. All fidelity towards visual, cultural, political, and geometrical context/agenda is lost, resulting in a new class of compositions that are unique but not critical. This project serves as an introduction to the possibilities that machine learning can bring to a design workflow. The systems, primarily Generative Adversarial Networks (GANs) and Convolutional Neural Networks (CNNs), are explored with input images and analyzed as output images. These outputs, while biased by the Designer’s inputs, lack any affinity towards meaning or aesthetic. The designer’s role extends to that of a critic who identifies the output images that add value to the designer’s intent or exposes them to new spatial relationships while also learning to dismiss the inherent tropes of machine learning.
-
-                            <br><br>The project “Macbeth of Zerg” combine two patterns style, Rococo and Machine language of the database, and applies the stage design process to the three iterations. The three iterations(Scenes) reflect the witches’ foretelling, Macbeth’s crown, and death.
-                            
-                        </p>
-                        </div>
+                    <div class="col-4">
+                        <a href="../About.html"><b>About</b></a>
                     </div>
-                </div>
+                </nav>
             </div>
-            <span onclick="closeInfoPanel()" style="position: absolute; top: 50%; right: 20px; transform: translateY(-50%); cursor: pointer; color: black;">&times;</span>
-        </div>
+        </header>
 
+        <main>
+            <div class="info-panel" id="info-panel">
+                <div class="row">
+                    <div class="col-6">
+                        <p>Macbeth of Zerg</p>
+                    </div>
+                    <div class="col-3">
+                        <p><a href="#" onclick="showInfo()" style="color: black; text-decoration: none;">info</a></p>
+                        <div id="infoModal" class="modal" style="display: none; float:left; top: 12%; left: 20px; width: 100%; height: 100%; z-index: 2000;">
+                            <div class="modal-content" style="background-color: rgba(224, 224, 224, 0.6); border: 0px; margin:0; padding: 20px; width: 100%; max-width: 400px; border-radius: 5px;">
+                                <span onclick="closeInfo()" style="float: right; cursor: pointer; text-align: right;">&times;</span>
+                                
+                                Year: 2020<br>
+                                <hr>
+                                Technologies: RunwayML, Photogrammetry, Google Colab, zBrush</p>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <p><a href="#" onclick="showStory()" style="color: black; text-decoration: none;">story</a></p>
+                        <div id="storyModal" class="modal" style="display: none; float:left; top: 12%; left: 20px; width: 100%; height: 100%; z-index: 2000;">
+                            <div class="modal-content" style="background-color: rgba(224, 224, 224, 0.6); border: 0px; margin:0; padding: 20px; width: 100%; max-width: 400px; border-radius: 5px;">
+                                <span onclick="closeStory()" style="float: right; cursor: pointer; text-align: right;">&times;</span>
+                                
+                                <p>Machine learning engages graphic information differently than designers do. All fidelity towards visual, cultural, political, and geometrical context/agenda is lost, resulting in a new class of compositions that are unique but not critical. This project serves as an introduction to the possibilities that machine learning can bring to a design workflow. The systems, primarily Generative Adversarial Networks (GANs) and Convolutional Neural Networks (CNNs), are explored with input images and analyzed as output images. These outputs, while biased by the Designer’s inputs, lack any affinity towards meaning or aesthetic. The designer’s role extends to that of a critic who identifies the output images that add value to the designer’s intent or exposes them to new spatial relationships while also learning to dismiss the inherent tropes of machine learning.
+
+                                <br><br>The project “Macbeth of Zerg” combine two patterns style, Rococo and Machine language of the database, and applies the stage design process to the three iterations. The three iterations(Scenes) reflect the witches’ foretelling, Macbeth’s crown, and death.
+                                
+                            </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <span onclick="closeInfoPanel()" style="position: absolute; top: 50%; right: 20px; transform: translateY(-50%); cursor: pointer; color: black;">&times;</span>
+            </div>
+
+
+
+            <div style="display: flex; overflow-x: auto; overflow-y: hidden; height: 90vh; justify-content: flex-start; align-items: center; " onwheel="event.preventDefault(); this.scrollLeft += event.deltaY;">
+                <img src="221210_Macbeth-of-Zerg/01_Yione_Macbeth-of-Zerg.jpg" style="height: 50%; object-fit: contain; margin-left: 10rem; margin-right: 5rem;">
+                <img src="221210_Macbeth-of-Zerg/02_Yione_Macbeth-of-Zerg.jpg" style="height: 50%; object-fit: contain; margin: 5rem;">
+                <div class="text-container" style=" flex-shrink: 0; margin: 5rem; width: 400px; color: white;">
+                    <p><b>Macbeth<br>
+                        ACT I SCENE I. A Desert Place.</b>
+                        <br><br><i>Thunder and lightning. Enter three Witches</i>
+
+                        <br><br><em>First Witch</em>
+                        
+                        <br>When shall we three meet again
+                        <br>In thunder, lightning, or in rain?
+                        
+                        <br><br><em>Second Witch</em>
+                        
+                        <br>When the hurlyburly's done,
+                        <br>When the battle's lost and won.
+                        
+                        <br><br><em>Third Witch</em>
+                        
+                        <br>That will be ere the set of sun.
+
+                        <br><br><em>First Witch</em>
+
+                        <br>Where the place?
+
+                        <br><br><em>Second Witch</em>
+
+                        <br>Upon the heath.
+
+                        <br><br><em>Third Witch</em>
+
+                        <br>There to meet with Macbeth.
+                </p>
+                </div>
+                <img src="221210_Macbeth-of-Zerg/03_Yione_Macbeth-of-Zerg.jpg" style="height: 50%; object-fit: contain; margin-left: 10rem; margin-right: 5rem;">
+                <img src="221210_Macbeth-of-Zerg/04_Yione_Macbeth-of-Zerg.jpg" style="height: 50%; object-fit: contain; margin: 5rem;">
+                <div class="text-container" style=" flex-shrink: 0; margin: 5rem; width: 400px; color: white;">
+                    <p><b>Macbeth<br>
+                        ACT III SCENE IV. The same. Hall in the palace.</b>
+
+                        <br><br><em>MACBETH</em>
+
+                        <br>Sweet remembrancer!
+                        <br>Now, good digestion wait on appetite,
+                        <br>And health on both!
+
+                        <br><br><em>LENNOX</em>
+
+                        <br>May't please your highness sit.
+
+                        <br>The GHOST OF BANQUO enters, and sits in MACBETH's place
+
+                        <br><br><em>MACBETH</em>
+
+                        <br>Here had we now our country's honour roof'd,
+                        <br>Were the graced person of our Banquo present;
+                        <br>Who may I rather challenge for unkindness
+                        <br>Than pity for mischance!
+
+                        <br><br><em>ROSS</em>
+
+                        <br>His absence, sir,
+                        <br>Lays blame upon his promise. Please't your highness
+                        <br>To grace us with your royal company.
+
+                        <br><br><em>MACBETH</em>
+
+                        <br>The table's full.
+                </p>
+                </div>                        
+                <img src="221210_Macbeth-of-Zerg/05_Yione_Macbeth-of-Zerg.jpg" style="height: 50%; object-fit: contain; margin-left: 10rem; margin-right: 5rem;">
+                <img src="221210_Macbeth-of-Zerg/06_Yione_Macbeth-of-Zerg.jpg" style="height: 50%; object-fit: contain; margin: 5rem;">
+                <div class="text-container" style=" flex-shrink: 0; margin: 5rem; width: 400px; color: white;">
+                    <p><b>Macbeth<br>
+                        ACT V SCENE VII. Another part of the field.</b>
+
+                        <br><br><em>YOUNG SIWARD</em>
+
+                        <br>What is thy name?
+
+                        <br><br><em>MACBETH</em>
+
+                        <br>Thou'lt be afraid to hear it.
+
+                        <br><br><em>YOUNG SIWARD</em>
+
+                        <br>No; though thou call'st thyself a hotter name
+                        <br>Than any is in hell.
+
+                        <br><br><em>MACBETH</em>
+                        <br>My name's Macbeth.
+
+                        <br><br><em>Re-enter MACDUFF, with MACBETH's head</em>
+
+                        <br><br><em>MACDUFF</em>
+
+                        <br>Hail, king! for so thou art: behold, where stands
+                        <br>The usurper's cursed head: the time is free:
+                        <br>I see thee compass'd with thy kingdom's pearl,
+                        <br>That speak my salutation in their minds;
+                        <br>Whose voices I desire aloud with mine:
+                        <br>Hail, King of Scotland!
+
+                        <br><br><em>ALL</em>
+
+                        <br>Hail, King of Scotland!
+
+                        <br>Flourish
+                </p>
+                </div> 
+            </div>
+        </main>
+        <footer>
+            <small>© 2025 Studio Yione</small>
+        </footer>
         <script>
             function closeInfoPanel() {
                 document.getElementById('info-panel').style.display = 'none';
@@ -161,119 +292,5 @@
                 document.getElementById('storyModal').style.display = 'none';
             }
         </script>
-
-        <div style="display: flex; overflow-x: auto; overflow-y: hidden; height: 90vh; justify-content: flex-start; align-items: center; " onwheel="event.preventDefault(); this.scrollLeft += event.deltaY;">
-            <img src="221210_Macbeth-of-Zerg/01_Yione_Macbeth-of-Zerg.jpg" style="height: 50%; object-fit: contain; margin-left: 10rem; margin-right: 5rem;">
-            <img src="221210_Macbeth-of-Zerg/02_Yione_Macbeth-of-Zerg.jpg" style="height: 50%; object-fit: contain; margin: 5rem;">
-            <div class="text-container" style=" flex-shrink: 0; margin: 5rem; width: 400px; color: white;">
-                <p><b>Macbeth<br>
-                    ACT I SCENE I. A Desert Place.</b>
-                    <br><br><i>Thunder and lightning. Enter three Witches</i>
-
-                    <br><br><em>First Witch</em>
-                    
-                    <br>When shall we three meet again
-                    <br>In thunder, lightning, or in rain?
-                    
-                    <br><br><em>Second Witch</em>
-                    
-                    <br>When the hurlyburly's done,
-                    <br>When the battle's lost and won.
-                    
-                    <br><br><em>Third Witch</em>
-                    
-                    <br>That will be ere the set of sun.
-
-                    <br><br><em>First Witch</em>
-
-                    <br>Where the place?
-
-                    <br><br><em>Second Witch</em>
-
-                    <br>Upon the heath.
-
-                    <br><br><em>Third Witch</em>
-
-                    <br>There to meet with Macbeth.
-            </p>
-            </div>
-            <img src="221210_Macbeth-of-Zerg/03_Yione_Macbeth-of-Zerg.jpg" style="height: 50%; object-fit: contain; margin-left: 10rem; margin-right: 5rem;">
-            <img src="221210_Macbeth-of-Zerg/04_Yione_Macbeth-of-Zerg.jpg" style="height: 50%; object-fit: contain; margin: 5rem;">
-            <div class="text-container" style=" flex-shrink: 0; margin: 5rem; width: 400px; color: white;">
-                <p><b>Macbeth<br>
-                    ACT III SCENE IV. The same. Hall in the palace.</b>
-
-                    <br><br><em>MACBETH</em>
-
-                    <br>Sweet remembrancer!
-                    <br>Now, good digestion wait on appetite,
-                    <br>And health on both!
-
-                    <br><br><em>LENNOX</em>
-
-                    <br>May't please your highness sit.
-
-                    <br>The GHOST OF BANQUO enters, and sits in MACBETH's place
-
-                    <br><br><em>MACBETH</em>
-
-                    <br>Here had we now our country's honour roof'd,
-                    <br>Were the graced person of our Banquo present;
-                    <br>Who may I rather challenge for unkindness
-                    <br>Than pity for mischance!
-
-                    <br><br><em>ROSS</em>
-
-                    <br>His absence, sir,
-                    <br>Lays blame upon his promise. Please't your highness
-                    <br>To grace us with your royal company.
-
-                    <br><br><em>MACBETH</em>
-
-                    <br>The table's full.
-            </p>
-            </div>                        
-            <img src="221210_Macbeth-of-Zerg/05_Yione_Macbeth-of-Zerg.jpg" style="height: 50%; object-fit: contain; margin-left: 10rem; margin-right: 5rem;">
-            <img src="221210_Macbeth-of-Zerg/06_Yione_Macbeth-of-Zerg.jpg" style="height: 50%; object-fit: contain; margin: 5rem;">
-            <div class="text-container" style=" flex-shrink: 0; margin: 5rem; width: 400px; color: white;">
-                <p><b>Macbeth<br>
-                    ACT V SCENE VII. Another part of the field.</b>
-
-                    <br><br><em>YOUNG SIWARD</em>
-
-                    <br>What is thy name?
-
-                    <br><br><em>MACBETH</em>
-
-                    <br>Thou'lt be afraid to hear it.
-
-                    <br><br><em>YOUNG SIWARD</em>
-
-                    <br>No; though thou call'st thyself a hotter name
-                    <br>Than any is in hell.
-
-                    <br><br><em>MACBETH</em>
-                    <br>My name's Macbeth.
-
-                    <br><br><em>Re-enter MACDUFF, with MACBETH's head</em>
-
-                    <br><br><em>MACDUFF</em>
-
-                    <br>Hail, king! for so thou art: behold, where stands
-                    <br>The usurper's cursed head: the time is free:
-                    <br>I see thee compass'd with thy kingdom's pearl,
-                    <br>That speak my salutation in their minds;
-                    <br>Whose voices I desire aloud with mine:
-                    <br>Hail, King of Scotland!
-
-                    <br><br><em>ALL</em>
-
-                    <br>Hail, King of Scotland!
-
-                    <br>Flourish
-            </p>
-            </div> 
-        </div>
-
     </body>
 </html>
