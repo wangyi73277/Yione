@@ -4,6 +4,17 @@
         <title>Yione</title>
         <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
         <link rel="icon" href="/Logo/favicon.ico" type="image/x-icon">
+        <meta name="description" content="Castlewood Spa Center is a spa center located in Castlewood State Park, Missouri.">
+        <meta name="robots" content="index, follow">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta name="copyright" content="© 2025 Studio Yione. All rights reserved.">
+        <meta name="og:title" content="Castlewood Spa Center">
+        <meta name="og:description" content="Castlewood Spa Center is a spa center located in Castlewood State Park, Missouri.">
+        <meta name="og:image" content="projects\200500_Castlewood-Spa-Center\00_Yione_Castle-Spa-Center_Thumbnail.jpg">
+        <meta name="og:url" content="https://www.yione.org">
+        <meta name="og:site_name" content="Studio Yione">
+        <meta name="og:type" content="website">
+        <meta name="og:locale" content="en_US">
         <style>
             body { background-color: #e0e0e0; }
             
@@ -40,8 +51,8 @@
 
             .info-panel {
                 position: fixed;
-                bottom: 20px;
-                left: 20px;
+                bottom: 25px;
+                left: 25px;
                 background-color: rgba(224, 224, 224, 0.6);
                 padding: 20px;
                 border-radius: 5px;
@@ -68,6 +79,16 @@
             .modal-content {
                 pointer-events: auto; /* Re-enable interactions for modal content */
             }
+            footer {
+                position: fixed;
+                bottom: 0px;
+                left: 25px;
+                font-size: 0.8rem;
+                text-align: left;
+                color: #666;
+                padding: 0rem;
+                z-index: 1000;
+            }
         </style>
     </head>
     
@@ -81,7 +102,8 @@
     </script>
 
     <body>  
-        <div class="container overflow-hidden px-1 text-center">
+        <header>
+        <div class="container px-1 text-center">
             <nav class="row align-items-end p-4">
                 <div class="col-4"><b>Studio Yione</b></div>
                 <div class="col-4">
@@ -143,6 +165,21 @@
             <span onclick="closeInfoPanel()" style="position: absolute; top: 50%; right: 20px; transform: translateY(-50%); cursor: pointer; color: black;">&times;</span>
         </div>
 
+
+        <div style="display: flex; overflow-x: auto; overflow-y: hidden; height: 90vh; justify-content: flex-start; align-items: center; " onwheel="event.preventDefault(); this.scrollLeft += event.deltaY;">
+            <img src="200500_Castlewood-Spa-Center/01_Yione_Castle-Spa-Center_Site.jpg" style="height: 40%; object-fit: contain; margin-left: 15rem; margin-right: 10rem;">
+            <img src="200500_Castlewood-Spa-Center/03_Yione_Castle-Spa-Center_Exterior.jpg" style="height: 90%; object-fit: contain; margin: 10rem">
+            <img src="200500_Castlewood-Spa-Center/02_Yione_Castle-Spa-Center_Concept.png" style="height: 95%; object-fit: contain; margin: 20rem">
+            <img src="200500_Castlewood-Spa-Center/04_Yione_Castle-Spa-Center_Interior.jpg" style="height: 100%; object-fit: contain;  margin: 15rem">
+            <img src="200500_Castlewood-Spa-Center/05_Yione_Castle-Spa-Center_Interior.jpg" style="height: 60%; object-fit: contain;  margin: 5rem">
+            <img src="200500_Castlewood-Spa-Center/06_Yione_Castle-Spa-Center_Axo.png" style="height: 100%; object-fit: contain;  margin-left: 20rem">
+        </div>
+    </header>
+
+        <footer>
+            <small>© 2025 Studio Yione</small>
+        </footer>
+
         <script>
             function closeInfoPanel() {
                 document.getElementById('info-panel').style.display = 'none';
@@ -165,15 +202,6 @@
                 document.getElementById('storyModal').style.display = 'none';
             }
         </script>
-
-        <div style="display: flex; overflow-x: auto; overflow-y: hidden; height: 90vh; justify-content: flex-start; align-items: center; " onwheel="event.preventDefault(); this.scrollLeft += event.deltaY;">
-            <img src="200500_Castlewood-Spa-Center/01_Yione_Castle-Spa-Center_Site.jpg" style="height: 40%; object-fit: contain; margin-left: 15rem; margin-right: 10rem;">
-            <img src="200500_Castlewood-Spa-Center/03_Yione_Castle-Spa-Center_Exterior.jpg" style="height: 90%; object-fit: contain; margin: 10rem">
-            <img src="200500_Castlewood-Spa-Center/02_Yione_Castle-Spa-Center_Concept.png" style="height: 95%; object-fit: contain; margin: 20rem">
-            <img src="200500_Castlewood-Spa-Center/04_Yione_Castle-Spa-Center_Interior.jpg" style="height: 100%; object-fit: contain;  margin: 15rem">
-            <img src="200500_Castlewood-Spa-Center/05_Yione_Castle-Spa-Center_Interior.jpg" style="height: 60%; object-fit: contain;  margin: 5rem">
-            <img src="200500_Castlewood-Spa-Center/06_Yione_Castle-Spa-Center_Axo.png" style="height: 100%; object-fit: contain;  margin-left: 20rem">
-        </div>
 
     </body>
 </html>
