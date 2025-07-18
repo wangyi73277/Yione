@@ -1,0 +1,20 @@
+h1{
+    /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+    text-transform: uppercase;
+}
+a {
+    color:black;
+    /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+    text-transform: capitalize;
+    text-decoration: none;
+}
+
+a:hover {
+    color: grey;
+    text-decoration: underline;
+}
+
+html {
+    font-size: 16px;
+    font-family: 'Century Gothic', sans-serif;
+  }

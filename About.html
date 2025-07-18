@@ -3,6 +3,7 @@
     <head>
         <title>Yione</title>
         <link rel="stylesheet" href="assets\css\bootstrap.min.css">
+        <link rel="stylesheet" href="assets\css\Style.css">
         <link rel="icon" href="/Logo/favicon.ico" type="image/x-icon">
         <meta name="description" content="Studio Yione is a spatial design practice based in New York, USA. The studio operates at the intersection of architecture, landscape, and emerging technologies, with a mission to craft meaningful, transformative environments across scales.">
         <meta name="robots" content="index, follow">
@@ -27,26 +28,6 @@
                 text-decoration: underline;
             }
 
-            .thumbnail {
-                width: 60%;
-                transition: transform 0.3s ease;
-            }
-            .thumbnail:hover { transform: scale(1.05); }
-
-            .project-link {
-                display: block;
-                margin-bottom: 1rem;
-            }
-
-            .project-title {
-                font-size: 1rem;
-                margin-top: 0.5rem;
-            }
-
-            @media (min-width: 992px) {
-                .thumbnail { width: 40%; }
-            }
-
             .hidden { display: none; }
 
             
@@ -56,141 +37,146 @@
             padding: 1em 0;
             }
         </style>
+
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-RZ3T490TYM"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-RZ3T490TYM');
+        </script>
     </head>
-    
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RZ3T490TYM"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-RZ3T490TYM');
-    </script>
 
     <body>  
-        <div class="container overflow-hidden px-1 text-center">
-            <nav class="row align-items-end p-4">
-                <div class="col-4"><b>Studio Yione</b></div>
-                <div class="col-4">
-                    <div class="dropdown">
-                        <a href="index.html" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                            <img src="/Logo/Logo.png" width="60" height="60" alt="Yione" class="logo">
-                            <br><b>Works</b>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#" onclick="showAllProjects()">All</a></li>
-                            <li><a class="dropdown-item" href="#" onclick="filterProjects('Arch')">Architecture</a></li>
-                            <li><a class="dropdown-item" href="#" onclick="filterProjects('ArtTech')">Art+Tech</a></li>
-                        </ul>
+        <header>
+            <div class="container overflow-hidden px-1 text-center">
+                <nav class="row align-items-end p-4">
+                    <div class="col-4"><b>Studio Yione</b></div>
+                    <div class="col-4">
+                        <div class="dropdown">
+                            <a href="index.html" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                                <img src="/Logo/Logo.png" width="60" height="60" alt="Yione" class="logo">
+                                <br><b>Works</b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#" onclick="showAllProjects()">All</a></li>
+                                <li><a class="dropdown-item" href="#" onclick="filterProjects('Arch')">Architecture</a></li>
+                                <li><a class="dropdown-item" href="#" onclick="filterProjects('ArtTech')">Art+Tech</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <a href="About.html"><b>About</b></a>
+                    </div>
+                </nav>
+            </div>
+        </header>
+
+        <main>
+            <div class="container overflow-hidden px-1">
+                <div class="row">
+                    <div class="col-12 col-sm-6">
+                    <b>
+                        Studio Yione is a spatial design practice based in New York, USA. The studio operates at the intersection of architecture, landscape, and emerging technologies, with a mission to craft meaningful, transformative environments across scales.
+                    </b>
+                    <br><br>
+                    <p>
+                    We design for the past and  the future at the present.
+                    </p>
                     </div>
                 </div>
-                <div class="col-4">
-                    <a href="About.html"><b>About</b></a>
-                </div>
-            </nav>
-        </div>
-
-        <div class="container overflow-hidden px-1">
-            <div class="row">
-                <div class="col-12 col-sm-6">
-                <b>
-                    Studio Yione is a spatial design practice based in New York, USA. The studio operates at the intersection of architecture, landscape, and emerging technologies, with a mission to craft meaningful, transformative environments across scales.
-                </b>
-                <br><br>
-                <p>
-                We design for the past and  the future at the present.
-                </p>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-6 col-sm-4">
-                    <b>Address</b>
-                    <p>
-                        368 Eastern Parkway, Brooklyn, NY 11225
-                    </p>
-                </div>
-                <div class="col-6 col-sm-4">
-                    <p>
-                        <b>Get in touch</b>
-                        <br>
-                        314 906 6118
-                        <br>
-                        <a href="mailto:studioyione@gmail.com" style="text-decoration: underline">studioyione@gmail.com</a>
-                        <br>
-                        <br>
-                        <b>Follow us</b><br>
-                        <a href="https://www.instagram.com/yione_studio/" style="text-decoration: underline">Instagram</a>
-                    </p>
-
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-12 col-sm-6">
-                <p>
-                    <b>Team</b>
-                    <br>
-                    Yi Wang, RA, LEED Green Associate
-                    <br>
-                    <i>Yi Wang is a registered architect and interdisciplinary designer based in New York. She holds a Master of Architecture degree from Washington University in St. Louis and has previously worked at internationally renowned architectural offices, including Christian Kerez GmbH, SO–IL, Dorte Mandrup Arkitekter A/S, and Kengo Kuma & Associates.</i>
-                    <br>
-                    <i>Her work explores the intersections of architecture, art, and technology, emphasizing cultural memory, urban narratives, and sustainable design strategies. Currently, she continues to investigate how architecture can engage and transform public perception and urban experiences.</i>
-                    <br>
-                    <br>
-                    Xiaochang Qiu
-                    <br>
-                    <i>Xiaochang Qiu is a dedicated landscape architect who combines her lifelong passion for nature with a focus on multi-sensorial design. She earned her Master of Landscape Architecture degree from Cornell University and has practiced at renowned firms such as AECOM and BIG.</i>
-                    <br>
-                    <i>With a strong belief in the intersectionality of landscapes, Xiaochang aims to create spaces that promote biodiversity, mitigate climate change, and enhance overall well-being. She also recognizes the vital role of landscape architecture in shaping a more equitable and just world. Through her designs, she strives to contribute to a more sustainable and inclusive future.</i>
-                    <br>
-                    
-                </p>
-            </div>
-
-
-
-            <div class="row">
-                <p>
-                    <b>Award</b>
-                    <br>
-                </p>
 
                 <div class="row">
-                    <b>2025</b>
-                <div class="col-6 col-sm-2">
-                        <p>Staggering of Urban Lifestyles</p>
-                </div>
-                <div class="col-6 col-sm-4">
-                    <p>
-                        Metal in Construction 2025 Design Challenge Grand Prize
-                    </p>
+                    <div class="col-6 col-sm-4">
+                        <b>Address</b>
+                        <p>
+                            368 Eastern Parkway, Brooklyn, NY 11225
+                        </p>
+                    </div>
+                    <div class="col-6 col-sm-4">
+                        <p>
+                            <b>Get in touch</b>
+                            <br>
+                            314 906 6118
+                            <br>
+                            <a href="mailto:studioyione@gmail.com" style="text-decoration: underline">studioyione@gmail.com</a>
+                            <br>
+                            <br>
+                            <b>Follow us</b><br>
+                            <a href="https://www.instagram.com/yione_studio/" style="text-decoration: underline">Instagram</a>
+                        </p>
+
+                    </div>
                 </div>
 
                 <div class="row">
-                    <b>2021</b>
-                <div class="col-6 col-sm-2">
-                        <p>Tiny for Now</p>
-                </div>
-                <div class="col-6 col-sm-4">
+                    <div class="col-12 col-sm-6">
                     <p>
-                        Tiny Library Design Competition Honorable Mention
+                        <b>Team</b>
+                        <br>
+                        Yi Wang, RA, LEED Green Associate
+                        <br>
+                        <i>Yi Wang is a registered architect and interdisciplinary designer based in New York. She holds a Master of Architecture degree from Washington University in St. Louis and has previously worked at internationally renowned architectural offices, including Christian Kerez GmbH, SO–IL, Dorte Mandrup Arkitekter A/S, and Kengo Kuma & Associates.</i>
+                        <br>
+                        <i>Her work explores the intersections of architecture, art, and technology, emphasizing cultural memory, urban narratives, and sustainable design strategies. Currently, she continues to investigate how architecture can engage and transform public perception and urban experiences.</i>
+                        <br>
+                        <br>
+                        Xiaochang Qiu
+                        <br>
+                        <i>Xiaochang Qiu is a dedicated landscape architect who combines her lifelong passion for nature with a focus on multi-sensorial design. She earned her Master of Landscape Architecture degree from Cornell University and has practiced at renowned firms such as AECOM and BIG.</i>
+                        <br>
+                        <i>With a strong belief in the intersectionality of landscapes, Xiaochang aims to create spaces that promote biodiversity, mitigate climate change, and enhance overall well-being. She also recognizes the vital role of landscape architecture in shaping a more equitable and just world. Through her designs, she strives to contribute to a more sustainable and inclusive future.</i>
+                        <br>
+                        
                     </p>
                 </div>
 
+
+
                 <div class="row">
-                    <b>2016</b>
-                <div class="col-6 col-sm-2">
-                        <p>Sn Cemetery</p>
-                </div>
-                <div class="col-6 col-sm-4">
                     <p>
-                        National ART & TECH Architecture Design Competition Honorable Mention
+                        <b>Award</b>
+                        <br>
                     </p>
+
+                    <div class="row">
+                        <b>2025</b>
+                    <div class="col-6 col-sm-2">
+                            <p>Staggering of Urban Lifestyles</p>
+                    </div>
+                    <div class="col-6 col-sm-4">
+                        <p>
+                            Metal in Construction 2025 Design Challenge Grand Prize
+                        </p>
+                    </div>
+
+                    <div class="row">
+                        <b>2021</b>
+                    <div class="col-6 col-sm-2">
+                            <p>Tiny for Now</p>
+                    </div>
+                    <div class="col-6 col-sm-4">
+                        <p>
+                            Tiny Library Design Competition Honorable Mention
+                        </p>
+                    </div>
+
+                    <div class="row">
+                        <b>2016</b>
+                    <div class="col-6 col-sm-2">
+                            <p>Sn Cemetery</p>
+                    </div>
+                    <div class="col-6 col-sm-4">
+                        <p>
+                            National ART & TECH Architecture Design Competition Honorable Mention
+                        </p>
+                    </div>
                 </div>
-            </div>
-            <footer>
-                <small>© 2025 Studio Yione. All rights reserved.</small>
-            </footer>
+        </main>
+
+        <footer>
+            <small>© 2025 Studio Yione. All rights reserved.</small>
+        </footer>
     </body>
 </html>
