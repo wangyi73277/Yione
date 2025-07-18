@@ -30,32 +30,6 @@
 
             .hidden { display: none; }
 
-            .info-panel {
-                position: fixed;
-                bottom: 20px;
-                left: 20px;
-                background-color: rgba(224, 224, 224, 0.6);
-                padding: 20px;
-                border-radius: 5px;
-                width: 100%;
-                max-width: 400px;
-                z-index: 1000;
-            }
-
-            @media (max-width: 768px) {
-                .info-panel {
-                    width: 90%;
-                    bottom: 15px;
-                    padding: 15px;
-                }
-            }
-
-            .info-panel p {
-                color: black;
-                margin-bottom: 0.5rem;
-                font-size: 0.9rem;
-            }
-
             hr {
                 height: 1px; /* Thickness of the line */
                 background: #000; /* Color of the line */
@@ -79,8 +53,8 @@
         </script>
     </head>
     
-
     <body>  
+        <header>
         <div class="container overflow-hidden px-1 text-center">
             <nav class="row align-items-end p-4">
                 <div class="col-4" style="color: white;"><b>Studio Yione</b></div>
@@ -102,7 +76,9 @@
                 </div>
             </nav>
         </div>
+        </header>
 
+        <main>
         <div class="info-panel" id="info-panel">
             <div class="row">
                 <div class="col-6">
@@ -139,28 +115,7 @@
             <span onclick="closeInfoPanel()" style="position: absolute; top: 50%; right: 20px; transform: translateY(-50%); cursor: pointer; color: black;">&times;</span>
         </div>
 
-        <script>
-            function closeInfoPanel() {
-                document.getElementById('info-panel').style.display = 'none';
-                window.location.href = '../index.html';
-            }
 
-            function showInfo() {
-                document.getElementById('infoModal').style.display = 'block';
-            }
-            
-            function closeInfo() {
-                document.getElementById('infoModal').style.display = 'none';
-            }
-            
-            function showStory() {
-                document.getElementById('storyModal').style.display = 'block';
-            }
-            
-            function closeStory() {
-                document.getElementById('storyModal').style.display = 'none';
-            }
-        </script>
 
         <div style="display: flex; overflow-x: auto; overflow-y: hidden; height: 90vh; justify-content: flex-start; align-items: center; " onwheel="event.preventDefault(); this.scrollLeft += event.deltaY;">
             <img src="190510_Stilllife-Afterlife\01_Yione_Stilllife-Afterlife.jpg" style="height: 100%; object-fit: contain; margin-right: 10rem;">
@@ -195,6 +150,32 @@
             </div>
             <img src="190510_Stilllife-Afterlife\05_Yione_Stilllife-Afterlife.jpg" style="height: 70%; object-fit: contain; margin: 10rem">
         </div>
+        </main>
 
+        <footer class="project-footer">
+            <small>© 2025 Studio Yione</small>
+        </footer>
+        <script>
+            function closeInfoPanel() {
+                document.getElementById('info-panel').style.display = 'none';
+                window.location.href = '../index.html';
+            }
+    
+            function showInfo() {
+                document.getElementById('infoModal').style.display = 'block';
+            }
+            
+            function closeInfo() {
+                document.getElementById('infoModal').style.display = 'none';
+            }
+            
+            function showStory() {
+                document.getElementById('storyModal').style.display = 'block';
+            }
+            
+            function closeStory() {
+                document.getElementById('storyModal').style.display = 'none';
+            }
+        </script>
     </body>
 </html>

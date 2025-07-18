@@ -21,32 +21,6 @@
 
             .hidden { display: none; }
 
-            .info-panel {
-                position: fixed;
-                bottom: 25px;
-                left: 25px;
-                background-color: rgba(224, 224, 224, 0.6);
-                padding: 20px;
-                border-radius: 5px;
-                width: 100%;
-                max-width: 400px;
-                z-index: 1000;
-            }
-
-            @media (max-width: 768px) {
-                .info-panel {
-                    width: 90%;
-                    bottom: 15px;
-                    padding: 15px;
-                }
-            }
-
-            .info-panel p {
-                color: black;
-                margin-bottom: 0.5rem;
-                font-size: 0.9rem;
-            }
-
             hr {
                 height: 1px; /* Thickness of the line */
                 background: #000; /* Color of the line */
@@ -58,16 +32,6 @@
             }
             .modal-content {
                 pointer-events: auto; /* Re-enable interactions for modal content */
-            }
-            footer {
-                position: fixed;
-                bottom: 0px;
-                left: 25px;
-                font-size: 0.8rem;
-                text-align: left;
-                color: #666;
-                padding: 0rem;
-                z-index: 1000;
             }
         </style>
 
@@ -159,7 +123,7 @@
         </main>
 
 
-        <footer>
+        <footer class="project-footer">
             <small>© 2025 Studio Yione</small>
         </footer>
 

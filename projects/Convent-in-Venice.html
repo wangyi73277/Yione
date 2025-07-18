@@ -21,32 +21,6 @@
 
             .hidden { display: none; }
 
-            .info-panel {
-                position: fixed;
-                bottom: 20px;
-                left: 20px;
-                background-color: rgba(224, 224, 224, 0.6);
-                padding: 20px;
-                border-radius: 5px;
-                width: 100%;
-                max-width: 400px;
-                z-index: 1000;
-            }
-
-            @media (max-width: 768px) {
-                .info-panel {
-                    width: 90%;
-                    bottom: 15px;
-                    padding: 15px;
-                }
-            }
-
-            .info-panel p {
-                color: black;
-                margin-bottom: 0.5rem;
-                font-size: 0.9rem;
-            }
-
             hr {
                 height: 1px; /* Thickness of the line */
                 background: #000; /* Color of the line */
@@ -59,16 +33,7 @@
             .modal-content {
                 pointer-events: auto; /* Re-enable interactions for modal content */
             }
-            footer {
-            position: fixed;
-            bottom: 0px;
-            left: 25px;
-            font-size: 0.8rem;
-            text-align: left;
-            color: #666;
-            padding: 0rem;
-            z-index: 1000;
-        }
+
         </style>
 
         <!-- Google tag (gtag.js) -->
@@ -82,69 +47,87 @@
     </head>
     
     <body>  
-        <div class="container overflow-hidden px-1 text-center">
-            <nav class="row align-items-end p-4">
-                <div class="col-4"><b>Studio Yione</b></div>
-                <div class="col-4">
-                    <div class="dropdown">
-                        <a href="../index.html" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                            <img src="/Logo/Logo.png" width="60" height="60" alt="Yione" class="logo">
-                            <br><b>Works</b>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#" onclick="showAllProjects()">All</a></li>
-                            <li><a class="dropdown-item" href="#" onclick="filterProjects('Arch')">Architecture</a></li>
-                            <li><a class="dropdown-item" href="#" onclick="filterProjects('ArtTech')">Art+Tech</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-4">
-                    <a href="../About.html"><b>About</b></a>
-                </div>
-            </nav>
-        </div>
-
-        <div class="info-panel" id="info-panel">
-            <div class="row">
-                <div class="col-6">
-                    <p>Convent in Venice</p>
-                </div>
-                <div class="col-3">
-                    <p><a href="#" onclick="showInfo()" style="color: black; text-decoration: none;">info</a></p>
-                    <div id="infoModal" class="modal" style="display: none; float:left; top: 12%; left: 20px; width: 100%; height: 100%; z-index: 2000;">
-                        <div class="modal-content" style="background-color: rgba(224, 224, 224, 0.6); border: 0px; margin:0; padding: 20px; width: 100%; max-width: 400px; border-radius: 5px;">
-                            <span onclick="closeInfo()" style="float: right; cursor: pointer; text-align: right;">&times;</span>
-                            
-                            <p>Location: Venice, Italy<br>
-                            <hr>
-                            Year: 2020<br>
-                            <hr>
-                            Type: Convent</p>
-                            
+        <header>
+            <div class="container overflow-hidden px-1 text-center">
+                <nav class="row align-items-end p-4">
+                    <div class="col-4"><b>Studio Yione</b></div>
+                    <div class="col-4">
+                        <div class="dropdown">
+                            <a href="../index.html" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                                <img src="/Logo/Logo.png" width="60" height="60" alt="Yione" class="logo">
+                                <br><b>Works</b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#" onclick="showAllProjects()">All</a></li>
+                                <li><a class="dropdown-item" href="#" onclick="filterProjects('Arch')">Architecture</a></li>
+                                <li><a class="dropdown-item" href="#" onclick="filterProjects('ArtTech')">Art+Tech</a></li>
+                            </ul>
                         </div>
                     </div>
-                </div>
-                <div class="col-3">
-                    <p><a href="#" onclick="showStory()" style="color: black; text-decoration: none;">story</a></p>
-                    <div id="storyModal" class="modal" style="display: none; float:left; top: 12%; left: 20px; width: 100%; height: 100%; z-index: 2000;">
-                        <div class="modal-content" style="background-color: rgba(224, 224, 224, 0.6); border: 0px; margin:0; padding: 20px; width: 100%; max-width: 400px; border-radius: 5px;">
-                            <span onclick="closeStory()" style="float: right; cursor: pointer; text-align: right;">&times;</span>
-                            
-                            <p>The Vertical Convent in Venice provides a residence, study and workplace for religious sisters, while simultaneously offering spaces for visitor engagement. The architectural program thoughtfully mirrors the structured daily routines of the sisters, which revolve around prayer, contemplation, and work. Natural light is precisely carved into each space, illuminating interiors at the specific times of day when they are in use. Material selections pay homage to traditional convent typologies and reflect the distinction between public and private functions.
-
-                            <br><br>The first three levels, openly accessible and integrated within the urban context, accommodate public monastic functions--a chapel, school, and daycare--firmly rooting the convent within the community fabric.
-                            
-                            <br><br>Above these communal levels, private monastic spaces ascend in striking contrast. These elevated areas encompass the sisters’ cells, cloister, refectory, library, choir, a private chapel dedicated solely to the sisters, a chapter house, and a colloquium. Typically arranged horizontally in traditional convent layouts, these spaces are innovatively reorganized into a vertical composition.
-
-                            <br><br>This design strategy transforms the convent into a “habitable axis mundi,” symbolizing a profound connection between earth and heaven. By elevating the private, contemplative areas, the architecture both symbolically and physically directs spiritual pursuits toward the heavens, redefining the traditional convent layout into a contemporary, vertical expression.
-                            
-                        </p>
-                        </div>
+                    <div class="col-4">
+                        <a href="../About.html"><b>About</b></a>
                     </div>
-                </div>
+                </nav>
             </div>
-            <span onclick="closeInfoPanel()" style="position: absolute; top: 50%; right: 20px; transform: translateY(-50%); cursor: pointer; color: black;">&times;</span>
-        </div>
+        </header>
+
+        <main>
+            <div class="info-panel" id="info-panel">
+                <div class="row">
+                    <div class="col-6">
+                        <p>Convent in Venice</p>
+                    </div>
+                    <div class="col-3">
+                        <p><a href="#" onclick="showInfo()" style="color: black; text-decoration: none;">info</a></p>
+                        <div id="infoModal" class="modal" style="display: none; float:left; top: 12%; left: 20px; width: 100%; height: 100%; z-index: 2000;">
+                            <div class="modal-content" style="background-color: rgba(224, 224, 224, 0.6); border: 0px; margin:0; padding: 20px; width: 100%; max-width: 400px; border-radius: 5px;">
+                                <span onclick="closeInfo()" style="float: right; cursor: pointer; text-align: right;">&times;</span>
+                                
+                                <p>Location: Venice, Italy<br>
+                                <hr>
+                                Year: 2020<br>
+                                <hr>
+                                Type: Convent</p>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <p><a href="#" onclick="showStory()" style="color: black; text-decoration: none;">story</a></p>
+                        <div id="storyModal" class="modal" style="display: none; float:left; top: 12%; left: 20px; width: 100%; height: 100%; z-index: 2000;">
+                            <div class="modal-content" style="background-color: rgba(224, 224, 224, 0.6); border: 0px; margin:0; padding: 20px; width: 100%; max-width: 400px; border-radius: 5px;">
+                                <span onclick="closeStory()" style="float: right; cursor: pointer; text-align: right;">&times;</span>
+                                
+                                <p>The Vertical Convent in Venice provides a residence, study and workplace for religious sisters, while simultaneously offering spaces for visitor engagement. The architectural program thoughtfully mirrors the structured daily routines of the sisters, which revolve around prayer, contemplation, and work. Natural light is precisely carved into each space, illuminating interiors at the specific times of day when they are in use. Material selections pay homage to traditional convent typologies and reflect the distinction between public and private functions.
+
+                                <br><br>The first three levels, openly accessible and integrated within the urban context, accommodate public monastic functions--a chapel, school, and daycare--firmly rooting the convent within the community fabric.
+                                
+                                <br><br>Above these communal levels, private monastic spaces ascend in striking contrast. These elevated areas encompass the sisters’ cells, cloister, refectory, library, choir, a private chapel dedicated solely to the sisters, a chapter house, and a colloquium. Typically arranged horizontally in traditional convent layouts, these spaces are innovatively reorganized into a vertical composition.
+
+                                <br><br>This design strategy transforms the convent into a “habitable axis mundi,” symbolizing a profound connection between earth and heaven. By elevating the private, contemplative areas, the architecture both symbolically and physically directs spiritual pursuits toward the heavens, redefining the traditional convent layout into a contemporary, vertical expression.
+                                
+                            </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <span onclick="closeInfoPanel()" style="position: absolute; top: 50%; right: 20px; transform: translateY(-50%); cursor: pointer; color: black;">&times;</span>
+            </div>
+
+            <div style="display: flex; overflow-x: auto; overflow-y: hidden; height: 90vh; justify-content: flex-start; align-items: center; " onwheel="event.preventDefault(); this.scrollLeft += event.deltaY;">
+                <img src="201200_Venice-Convent/01_Yione_Venice-Convent_Interior.jpg" style="height: 90%; object-fit: contain; margin-right: 10rem;">
+                <img src="201200_Venice-Convent/02_Yione_Venice-Convent_Interior.jpg" style="height: 90%; object-fit: contain; margin: 10rem">
+                <img src="201200_Venice-Convent/03_Yione_Venice-Convent_Interior.jpg" style="height: 90%; object-fit: contain; margin: 10rem">
+                <img src="201200_Venice-Convent/04_Yione_Venice-Convent_Interior.jpg" style="height: 90%; object-fit: contain; margin: 10rem">
+                <img src="201200_Venice-Convent/05_Yione_Venice-Convent_Interior.jpg" style="height: 60%; object-fit: contain; margin: 10rem">
+                <img src="201200_Venice-Convent/06_Yione_Venice-Convent_Interior.jpg" style="height: 60%; object-fit: contain; margin: 10rem">
+                <img src="201200_Venice-Convent/07_Yione_Venice-Convent_Interior.jpg" style="height: 60%; object-fit: contain; margin: 10rem">
+            </div>
+        </main>
+
+        <footer class="project-footer">
+            <small>© 2025 Studio Yione</small>
+        </footer>
 
         <script>
             function closeInfoPanel() {
@@ -168,16 +151,5 @@
                 document.getElementById('storyModal').style.display = 'none';
             }
         </script>
-
-        <div style="display: flex; overflow-x: auto; overflow-y: hidden; height: 90vh; justify-content: flex-start; align-items: center; " onwheel="event.preventDefault(); this.scrollLeft += event.deltaY;">
-            <img src="201200_Venice-Convent/01_Yione_Venice-Convent_Interior.jpg" style="height: 90%; object-fit: contain; margin-right: 10rem;">
-            <img src="201200_Venice-Convent/02_Yione_Venice-Convent_Interior.jpg" style="height: 90%; object-fit: contain; margin: 10rem">
-            <img src="201200_Venice-Convent/03_Yione_Venice-Convent_Interior.jpg" style="height: 90%; object-fit: contain; margin: 10rem">
-            <img src="201200_Venice-Convent/04_Yione_Venice-Convent_Interior.jpg" style="height: 90%; object-fit: contain; margin: 10rem">
-            <img src="201200_Venice-Convent/05_Yione_Venice-Convent_Interior.jpg" style="height: 60%; object-fit: contain; margin: 10rem">
-            <img src="201200_Venice-Convent/06_Yione_Venice-Convent_Interior.jpg" style="height: 60%; object-fit: contain; margin: 10rem">
-            <img src="201200_Venice-Convent/07_Yione_Venice-Convent_Interior.jpg" style="height: 60%; object-fit: contain; margin: 10rem">
-        </div>
-
     </body>
 </html>

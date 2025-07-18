@@ -25,32 +25,6 @@
 
             .hidden { display: none; }
 
-            .info-panel {
-                position: fixed;
-                bottom: 20px;
-                left: 20px;
-                background-color: rgba(224, 224, 224, 0.6);
-                padding: 20px;
-                border-radius: 5px;
-                width: 100%;
-                max-width: 400px;
-                z-index: 1000;
-            }
-
-            @media (max-width: 768px) {
-                .info-panel {
-                    width: 90%;
-                    bottom: 15px;
-                    padding: 15px;
-                }
-            }
-
-            .info-panel p {
-                color: black;
-                margin-bottom: 0.5rem;
-                font-size: 0.9rem;
-            }
-
             hr {
                 height: 1px; /* Thickness of the line */
                 background: #000; /* Color of the line */
@@ -74,68 +48,83 @@
         </script>
     </head>
     
-
-
     <body>  
-        <div class="container overflow-hidden px-1 text-center">
-            <nav class="row align-items-end p-4">
-                <div class="col-4" style="color: white;"><b>Studio Yione</b></div>
-                <div class="col-4">
-                    <div class="dropdown">
-                        <a href="../index.html" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                            <img src="/Logo/Logo_white.png" width="60" height="60" alt="Yione" class="logo">
-                            <br><b>Works</b>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#" onclick="showAllProjects()">All</a></li>
-                            <li><a class="dropdown-item" href="#" onclick="filterProjects('Arch')">Architecture</a></li>
-                            <li><a class="dropdown-item" href="#" onclick="filterProjects('ArtTech')">Art+Tech</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-4">
-                    <a href="../About.html"><b>About</b></a>
-                </div>
-            </nav>
-        </div>
-
-        <div class="info-panel" id="info-panel">
-            <div class="row">
-                <div class="col-6">
-                    <p>Portable Workstation</p>
-                </div>
-                <div class="col-3">
-                    <p><a href="#" onclick="showInfo()" style="color: black; text-decoration: none;">info</a></p>
-                    <div id="infoModal" class="modal" style="display: none; float:left; top: 12%; left: 20px; width: 100%; height: 100%; z-index: 2000;">
-                        <div class="modal-content" style="background-color: rgba(224, 224, 224, 0.6); border: 0px; margin:0; padding: 20px; width: 100%; max-width: 400px; border-radius: 5px;">
-                            <span onclick="closeInfo()" style="float: right; cursor: pointer; text-align: right;">&times;</span>
-                            
-                            <p>Status: Field tested<br>
-                            <hr>
-                            Year: 2022<br>
-                            <hr>
-                            Type: HoloLens XR</p>
-                            
+        <header>
+            <div class="container overflow-hidden px-1 text-center">
+                <nav class="row align-items-end p-4">
+                    <div class="col-4" style="color: white;"><b>Studio Yione</b></div>
+                    <div class="col-4">
+                        <div class="dropdown">
+                            <a href="../index.html" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                                <img src="/Logo/Logo_white.png" width="60" height="60" alt="Yione" class="logo">
+                                <br><b>Works</b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#" onclick="showAllProjects()">All</a></li>
+                                <li><a class="dropdown-item" href="#" onclick="filterProjects('Arch')">Architecture</a></li>
+                                <li><a class="dropdown-item" href="#" onclick="filterProjects('ArtTech')">Art+Tech</a></li>
+                            </ul>
                         </div>
                     </div>
-                </div>
-                <div class="col-3">
-                    <p><a href="#" onclick="showStory()" style="color: black; text-decoration: none;">story</a></p>
-                    <div id="storyModal" class="modal" style="display: none; float:left; top: 12%; left: 20px; width: 100%; height: 100%; z-index: 2000;">
-                        <div class="modal-content" style="background-color: rgba(224, 224, 224, 0.6); border: 0px; margin:0; padding: 20px; width: 100%; max-width: 400px; border-radius: 5px;">
-                            <span onclick="closeStory()" style="float: right; cursor: pointer; text-align: right;">&times;</span>
-                            
-                            <p>Architecture thrives when designers are fully attuned to the living context of a project. Yet conventional practice—from site photographs and surveys to studio-bound sketches and CAD models—unwittingly funnels away this richness. Each linear step abstracts and confines the holistic context, leaving architecture trapped in static coordinates and rigid workflows.
-
-                            <br><br>In response, we envision a more fluid and empathetic approach. We introduce Portable Workstation, a mixed-reality tool for Microsoft HoloLens2 that transforms the architect’s workspace into an immersive memory palace where personal knowledge and project context interweave fluidly. In this augmented environment, digital notes, site data, and design tools surround the architect on site, ready to be summoned at any moment of inspiration. The architect thus engages in an embodied spatial practice that blurs the boundaries of where, when, and how design can happen, thereby dissolving the discontinuity of the conventional desk-bound workflow. In this poetic confluence of digital and physical realms, the design process becomes a continuous act of attunement—fluid, responsive, and deeply aligned with its environment.
-                            
-                        </p>
-                        </div>
+                    <div class="col-4">
+                        <a href="../About.html"><b>About</b></a>
                     </div>
-                </div>
+                </nav>
             </div>
-            <span onclick="closeInfoPanel()" style="position: absolute; top: 50%; right: 20px; transform: translateY(-50%); cursor: pointer; color: black;">&times;</span>
-        </div>
+        </header>
+
+        <main>
+            <div class="info-panel" id="info-panel">
+                <div class="row">
+                    <div class="col-6">
+                        <p>Portable Workstation</p>
+                    </div>
+                    <div class="col-3">
+                        <p><a href="#" onclick="showInfo()" style="color: black; text-decoration: none;">info</a></p>
+                        <div id="infoModal" class="modal" style="display: none; float:left; top: 12%; left: 20px; width: 100%; height: 100%; z-index: 2000;">
+                            <div class="modal-content" style="background-color: rgba(224, 224, 224, 0.6); border: 0px; margin:0; padding: 20px; width: 100%; max-width: 400px; border-radius: 5px;">
+                                <span onclick="closeInfo()" style="float: right; cursor: pointer; text-align: right;">&times;</span>
+                                
+                                <p>Status: Field tested<br>
+                                <hr>
+                                Year: 2022<br>
+                                <hr>
+                                Type: HoloLens XR</p>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <p><a href="#" onclick="showStory()" style="color: black; text-decoration: none;">story</a></p>
+                        <div id="storyModal" class="modal" style="display: none; float:left; top: 12%; left: 20px; width: 100%; height: 100%; z-index: 2000;">
+                            <div class="modal-content" style="background-color: rgba(224, 224, 224, 0.6); border: 0px; margin:0; padding: 20px; width: 100%; max-width: 400px; border-radius: 5px;">
+                                <span onclick="closeStory()" style="float: right; cursor: pointer; text-align: right;">&times;</span>
+                                
+                                <p>Architecture thrives when designers are fully attuned to the living context of a project. Yet conventional practice—from site photographs and surveys to studio-bound sketches and CAD models—unwittingly funnels away this richness. Each linear step abstracts and confines the holistic context, leaving architecture trapped in static coordinates and rigid workflows.
+
+                                <br><br>In response, we envision a more fluid and empathetic approach. We introduce Portable Workstation, a mixed-reality tool for Microsoft HoloLens2 that transforms the architect’s workspace into an immersive memory palace where personal knowledge and project context interweave fluidly. In this augmented environment, digital notes, site data, and design tools surround the architect on site, ready to be summoned at any moment of inspiration. The architect thus engages in an embodied spatial practice that blurs the boundaries of where, when, and how design can happen, thereby dissolving the discontinuity of the conventional desk-bound workflow. In this poetic confluence of digital and physical realms, the design process becomes a continuous act of attunement—fluid, responsive, and deeply aligned with its environment.
+                                
+                            </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <span onclick="closeInfoPanel()" style="position: absolute; top: 50%; right: 20px; transform: translateY(-50%); cursor: pointer; color: black;">&times;</span>
+            </div>
+            <div style="display: flex; overflow-x: auto; overflow-y: hidden; height: 90vh; justify-content: flex-start; align-items: center; " onwheel="event.preventDefault(); this.scrollLeft += event.deltaY;">
+                <img src="220501_Portable-Workstation\01_Yione_Portable-Workstation.png" style="height: 60%; object-fit: contain; margin: 10rem;">
+                <img src="220501_Portable-Workstation\02_Yione_Portable-Workstation.png" style="height: 40%; object-fit: contain; margin: 10rem">
+                <img src="220501_Portable-Workstation\03_Yione_Portable-Workstation_scene.jpg" style="height: 100%; object-fit: contain; margin-left: 10rem">
+                <img src="220501_Portable-Workstation\04_Yione_Portable-Workstation_scene.jpg" style="height: 100%; object-fit: contain; margin-left: 5rem">
+                <img src="220501_Portable-Workstation\05_Yione_Portable-Workstation_scene.jpg" style="height: 100%; object-fit: contain; margin: 5rem">
+                <img src="220501_Portable-Workstation\06_Yione_Portable-Workstation.png" style="height: 100%; object-fit: contain; margin-left: 15rem; margin-right: 0rem">
+                <img src="220501_Portable-Workstation\07_Yione_Portable-Workstation.png" style="height: 100%; object-fit: contain; margin: 5rem">
+            </div>
+        </main>
+
+        <footer class="project-footer">
+            <small>© 2025 Studio Yione</small>
+        </footer>
 
         <script>
             function closeInfoPanel() {
@@ -159,16 +148,5 @@
                 document.getElementById('storyModal').style.display = 'none';
             }
         </script>
-
-        <div style="display: flex; overflow-x: auto; overflow-y: hidden; height: 90vh; justify-content: flex-start; align-items: center; " onwheel="event.preventDefault(); this.scrollLeft += event.deltaY;">
-            <img src="220501_Portable-Workstation\01_Yione_Portable-Workstation.png" style="height: 60%; object-fit: contain; margin: 10rem;">
-            <img src="220501_Portable-Workstation\02_Yione_Portable-Workstation.png" style="height: 40%; object-fit: contain; margin: 10rem">
-            <img src="220501_Portable-Workstation\03_Yione_Portable-Workstation_scene.jpg" style="height: 100%; object-fit: contain; margin-left: 10rem">
-            <img src="220501_Portable-Workstation\04_Yione_Portable-Workstation_scene.jpg" style="height: 100%; object-fit: contain; margin-left: 5rem">
-            <img src="220501_Portable-Workstation\05_Yione_Portable-Workstation_scene.jpg" style="height: 100%; object-fit: contain; margin: 5rem">
-            <img src="220501_Portable-Workstation\06_Yione_Portable-Workstation.png" style="height: 100%; object-fit: contain; margin-left: 15rem; margin-right: 0rem">
-            <img src="220501_Portable-Workstation\07_Yione_Portable-Workstation.png" style="height: 100%; object-fit: contain; margin: 5rem">
-        </div>
-
     </body>
 </html>
