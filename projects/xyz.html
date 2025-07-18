@@ -3,6 +3,7 @@
     <head>
         <title>Yione</title>
         <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../assets/css/Style.css">
         <link rel="icon" href="/Logo/favicon.ico" type="image/x-icon">
         <meta name="description" content="X-Y-Z critically reflects on the conversional drawing standard from plan through section to oblique.">
         <meta name="robots" content="index, follow">
@@ -22,30 +23,6 @@
                 color: white;
                 text-decoration: none;
             }
-            a:hover {
-                color: gray;
-                text-decoration: underline;
-            }
-
-            .thumbnail {
-                width: 60%;
-                transition: transform 0.3s ease;
-            }
-            .thumbnail:hover { transform: scale(1.05); }
-
-            .project-link {
-                display: block;
-                margin-bottom: 1rem;
-            }
-
-            .project-title {
-                font-size: 1rem;
-                margin-top: 0.5rem;
-            }
-
-            @media (min-width: 992px) {
-                .thumbnail { width: 40%; }
-            }
 
             .hidden { display: none; }
 
@@ -61,6 +38,14 @@
                 z-index: 1000;
             }
 
+            @media (max-width: 768px) {
+                .info-panel {
+                    width: 90%;
+                    bottom: 15px;
+                    padding: 15px;
+                }
+            }
+
             .info-panel p {
                 color: black;
                 margin-bottom: 0.5rem;
@@ -70,7 +55,7 @@
             hr {
                 height: 1px; /* Thickness of the line */
                 background: #000; /* Color of the line */
-                margin: px; /* Space above and below the line */
+                margin: 1rem; /* Space above and below the line */
             }
 
             .modal {
@@ -79,17 +64,27 @@
             .modal-content {
                 pointer-events: auto; /* Re-enable interactions for modal content */
             }
+            footer {
+            position: fixed;
+            bottom: 0px;
+            left: 25px;
+            font-size: 0.8rem;
+            text-align: left;
+            color: #666;
+            padding: 0rem;
+            z-index: 1000;
+        }
         </style>
-    </head>
     
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RZ3T490TYM"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-RZ3T490TYM');
-    </script>
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-RZ3T490TYM"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-RZ3T490TYM');
+        </script>
+    </head>
 
     <body>  
         <header>
@@ -153,36 +148,41 @@
             </div>
                 <span onclick="closeInfoPanel()" style="position: absolute; top: 50%; right: 20px; transform: translateY(-50%); cursor: pointer; color: black;">&times;</span>
             </div>
-        </main>
 
-        <script>
-            function closeInfoPanel() {
-                document.getElementById('info-panel').style.display = 'none';
-                window.location.href = '../index.html';
-            }
-
-            function showInfo() {
-                document.getElementById('infoModal').style.display = 'block';
-            }
-            
-            function closeInfo() {
-                document.getElementById('infoModal').style.display = 'none';
-            }
-            
-            function showStory() {
-                document.getElementById('storyModal').style.display = 'block';
-            }
-            
-            function closeStory() {
-                document.getElementById('storyModal').style.display = 'none';
-            }
-        </script>
 
         <div style="display: flex; overflow-x: auto; overflow-y: hidden; height: 90vh; justify-content: flex-start; align-items: center; " onwheel="event.preventDefault(); this.scrollLeft += event.deltaY;">
             <img src="181210_XYZ\01_Yione_XYZ.jpg" style="height: 100%; object-fit: contain; margin-right: 10rem;">
             
             <img src="181210_XYZ\02_Yione_XYZ.jpg" style="height: 100%; object-fit: contain; margin: 10rem">
         </div>
+    </main>
+
+    <footer>
+        <small id="side-footer">© 2025 Studio Yione</small>
+    </footer>
+
+    <script>
+        function closeInfoPanel() {
+            document.getElementById('info-panel').style.display = 'none';
+            window.location.href = '../index.html';
+        }
+
+        function showInfo() {
+            document.getElementById('infoModal').style.display = 'block';
+        }
+        
+        function closeInfo() {
+            document.getElementById('infoModal').style.display = 'none';
+        }
+        
+        function showStory() {
+            document.getElementById('storyModal').style.display = 'block';
+        }
+        
+        function closeStory() {
+            document.getElementById('storyModal').style.display = 'none';
+        }
+    </script>
 
     </body>
 </html>
