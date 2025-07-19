@@ -3,7 +3,7 @@
     <head>
         <title>Yione</title>
         <link rel="stylesheet" href="assets\css\bootstrap.min.css">
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="assets\css\Style.css">
         <link rel="icon" href="/Logo/favicon.ico" type="image/x-icon">
         <meta name="description" content="Studio Yione is a spatial design practice based in New York, USA. The studio operates at the intersection of architecture, landscape, and emerging technologies, with a mission to craft meaningful, transformative environments across scales.">
         <meta name="robots" content="index, follow">
@@ -37,13 +37,7 @@
             }
             
             a {
-                color: black;
-                text-decoration: none;
                 transition: color 0.3s ease;
-            }
-            a:hover {
-                color: gray;
-                text-decoration: underline;
             }
 
             .thumbnail {
@@ -68,11 +62,6 @@
 
             .hidden { display: none; }
 
-            footer {
-            text-align: center;
-            color: #666;
-            padding: 1em 0;
-            }
         </style>
 
         <!-- Google tag (gtag.js) -->
@@ -196,52 +185,12 @@
             </div>
         </div>
         </main>
-        <footer>
+        <footer class="home-footer">
             <small>© 2025 Studio Yione. All rights reserved.</small>
         </footer>
+        <script src="assets\js\filterProjects.js"></script>
+        <script src="assets\js\modeToggle.js"></script>
+        <script src="assets\js\main.js"></script>
         <script src="assets\js\bootstrap.bundle.min.js"></script>
-        <script>
-            function filterProjects(category) {
-                const projects = document.querySelectorAll('.Arch, .ArtTech');
-                projects.forEach(project => {
-                    if (project.classList.contains(category)) {
-                        project.closest('.col-12').style.display = 'block';
-                    } else {
-                        project.closest('.col-12').style.display = 'none';
-                    }
-                });
-            }
-
-            const showAllProjects = () => {
-                document.querySelectorAll('.Arch, .ArtTech').forEach(project => {
-                    project.closest('.col-12').style.display = 'block';
-                });
-            }
-
-            window.onload = showAllProjects;
-
-            // Dark/Light mode implementation
-            const archProjects = document.querySelectorAll('.Arch');
-            const artTechProjects = document.querySelectorAll('.ArtTech');
-
-            // Handle Arch projects (Light mode)
-            archProjects.forEach(project => {
-                project.addEventListener('mouseenter', () => {
-                    document.body.classList.remove('dark-mode');
-                    document.querySelector('.light-mode-logo').style.display = 'inline';
-                    document.querySelector('.dark-mode-logo').style.display = 'none';
-                });
-            });
-
-            // Handle ArtTech projects (Dark mode)
-            artTechProjects.forEach(project => {
-                project.addEventListener('mouseenter', () => {
-                    document.body.classList.add('dark-mode');
-                    document.querySelector('.light-mode-logo').style.display = 'none';
-                    document.querySelector('.dark-mode-logo').style.display = 'inline';
-                });
-            });
-
-        </script>
     </body>
 </html>
