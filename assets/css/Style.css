@@ -61,3 +61,13 @@ html {
     color: #666;
     padding: 1em 0;
     }
+
+.award-table td{
+    vertical-align: top;
+}
+
+.award-table th{
+    padding-top: 20px;
+}
+
+
