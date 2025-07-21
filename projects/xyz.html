@@ -52,27 +52,20 @@
 
     <body>  
         <header>
-            <div class="container overflow-hidden px-1 text-center">
-                <nav class="row align-items-end p-4">
-                    <div class="col-4" style="color: white;"><b>Studio Yione</b></div>
-                    <div class="col-4">
-                        <div class="dropdown">
-                            <a href="../index.html" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                                <img src="/Logo/Logo_white.png" width="60" height="60" alt="Yione" class="logo">
-                                <br><b>Works</b>
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#" onclick="showAllProjects()">All</a></li>
-                                <li><a class="dropdown-item" href="#" onclick="filterProjects('Arch')">Architecture</a></li>
-                                <li><a class="dropdown-item" href="#" onclick="filterProjects('ArtTech')">Art+Tech</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-4">
-                        <a href="../About.html"><b>About</b></a>
-                    </div>
-                </nav>
-            </div>
+            <nav>
+                <ul class="nav-list">
+                    <li><a href="#">Studio Yione</a></li>
+                    <li class="dropdown">
+                        <a href="../index.html" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                            <img src="/Logo/Logo_white.png" width="60" height="60" alt="Yione" class="logo">
+                            <br>Works
+                        </a>
+                    </li>
+                    <li class="about">
+                        <a href="../About.html">About</a>
+                    </li>
+                </ul>
+            </nav>
         </header>
         <main>
         <div class="info-panel" id="info-panel">

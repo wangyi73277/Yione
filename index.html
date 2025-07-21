@@ -76,28 +76,26 @@
 
     <body>  
         <header>
-            <div class="container px-1 text-center">
-                <nav class="row align-items-end p-4">
-                    <div class="col-4"><strong>Studio Yione</strong></div>
-                    <div class="col-4">
-                        <div class="dropdown">
-                            <a href="#works" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                                <img src="Logo/Logo.png" width="60" height="60" alt="Yione" class="logo light-mode-logo">
-                                <img src="Logo/Logo_white.png" width="60" height="60" alt="Yione" class="logo dark-mode-logo" style="display: none;">
-                                <br><b>Works</b>
-                            </a>
-                            <ul class="dropdown-menu" style="background-color: rgba(224, 224, 224, 0.8); border: 1px solid rgba(224, 224, 224, 0.3);">
-                                <li><a class="dropdown-item" href="#" onclick="showAllProjects()">All</a></li>
-                                <li><a class="dropdown-item" href="#" onclick="filterProjects('Arch')">Architecture</a></li>
-                                <li><a class="dropdown-item" href="#" onclick="filterProjects('ArtTech')">Art+Tech</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-4">
-                        <a href="About.html"><b>About</b></a>
-                    </div>
-                </nav>
-            </div>
+            <nav>
+                <ul class="nav-list">
+                    <li><a href="#">Studio Yione</a></li>
+                    <li class="dropdown">
+                        <a href="#works" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                            <img src="Logo/Logo.png" width="60" height="60" alt="Yione" class="logo light-mode-logo">
+                            <img src="Logo/Logo_white.png" width="60" height="60" alt="Yione" class="logo dark-mode-logo" style="display: none;">
+                            <br>Works
+                        </a>
+                        <ul class="dropdown-menu" style="background-color: rgba(224, 224, 224, 0.8); border: 1px solid rgba(224, 224, 224, 0.3);">
+                            <li><a class="dropdown-item" href="#" onclick="showAllProjects()">All</a></li>
+                            <li><a class="dropdown-item" href="#" onclick="filterProjects('Arch')">Architecture</a></li>
+                            <li><a class="dropdown-item" href="#" onclick="filterProjects('ArtTech')">Art+Tech</a></li>
+                        </ul>
+                    </li>
+                    <li class="about">
+                        <a href="About.html">About</a>
+                    </li>
+                </ul>
+            </nav>
         </header>
 
         <main>
@@ -186,8 +184,9 @@
         </div>
         </main>
         <footer class="home-footer">
-            <small>© 2025 Studio Yione. All rights reserved.</small>
+            <p>© 2025 Studio Yione. All rights reserved.</p>
         </footer>
+
         <script src="assets\js\filterProjects.js"></script>
         <script src="assets\js\modeToggle.js"></script>
         <script src="assets\js\main.js"></script>

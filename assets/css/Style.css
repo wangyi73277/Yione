@@ -70,4 +70,24 @@ html {
     padding-top: 20px;
 }
 
+.nav-list{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: end;
+}
+.nav-list > li{
+    list-style-type: none;
+    font-weight: bold;
+    flex: 1 1 100px;
+    text-align: center;
+}
+
+body.dark-mode .container li a{
+    color: white;
+}
+
+body.dark-mode {
+    background-color: black;
+}
+
 
