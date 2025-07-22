@@ -6,6 +6,8 @@ a {
     color:black;    /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
     text-transform: capitalize;
     text-decoration: none;
+    transition: 0.3s ease;
+
 }
 
 a:hover {
@@ -23,6 +25,7 @@ html {
     bottom: 25px;
     left: 25px;
     background-color: rgba(224, 224, 224, 0.6);
+    color: black;
     padding: 20px;
     border-radius: 5px;
     width: 100%;
@@ -61,14 +64,6 @@ html {
     color: #666;
     padding: 1em 0;
     }
-
-.award-table td{
-    vertical-align: top;
-}
-
-.award-table th{
-    padding-top: 20px;
-}
 
 .nav-list{
     display: flex;
@@ -109,6 +104,7 @@ body.project-page {
 
 body.dark-mode {
     background-color: black;
+    color: white;
 }
 
 body.dark-mode a{
