@@ -17,15 +17,7 @@
         <meta name="og:type" content="website">
         <meta name="og:locale" content="en_US">
         <style>
-            body { background-color: #e0e0e0; }
-
             .hidden { display: none; }
-
-            hr {
-                height: 1px; /* Thickness of the line */
-                background: #000; /* Color of the line */
-                margin: 1rem; /* Space above and below the line */
-            }
 
             .modal {
                 pointer-events: none; /* Allow scrolling through the modal */
@@ -33,6 +25,10 @@
             .modal-content {
                 pointer-events: auto; /* Re-enable interactions for modal content */
             }
+            .story-text {
+                text-overflow: scroll;
+            }
+
         </style>
 
         <!-- Google tag (gtag.js) -->
@@ -45,7 +41,7 @@
         </script>
     </head>
 
-    <body>  
+    <body class="project-page light-mode">
         <header>
             <nav>
                 <ul class="nav-list">
@@ -90,11 +86,14 @@
                         <div class="modal-content" style="background-color: rgba(224, 224, 224, 0.6); border: 0px; margin:0; padding: 20px; width: 100%; max-width: 400px; border-radius: 5px;">
                             <span onclick="closeStory()" style="float: right; cursor: pointer; text-align: right;">&times;</span>
                             
-                            <p>The Columbia Building was a nine-story Romanesque-style structure located at the southeast corner of 8th and Locust Streets in Downtown St. Louis. Its name, the Columbia Building, originates from its completion in 1892, marking 400 years since Christopher Columbus’s arrival in North America. Designed by architect Isaac Taylor, who housed his office on the 9th floor, the building was once a significant landmark. As the city faced economic decline, many developers opted to demolish unprofitable architectural monuments. However, in 1976, the owners of the Columbia Building chose to truncate its upper floors, leaving behind a two-story storefront box that still stands today. This preserved section offers a glimpse into the grandeur of the original structure.
+                            <p class="story-text">The Columbia Building was a nine-story Romanesque-style structure located at the southeast corner of 8th and Locust Streets in Downtown St. Louis. Its name, the Columbia Building, originates from its completion in 1892, marking 400 years since Christopher Columbus's arrival in North America. Designed by architect Isaac Taylor, who housed his office on the 9th floor, the building was once a significant landmark. As the city faced economic decline, many developers opted to demolish unprofitable architectural monuments. However, in 1976, the owners of the Columbia Building chose to truncate its upper floors, leaving behind a two-story storefront box that still stands today. This preserved section offers a glimpse into the grandeur of the original structure.
 
-                            <br><br>The project’s vision is to evoke the “ghost” of the original building, rekindling memories of St. Louis’s gold en age. The new design simplifies the structure to three columns and an elevator shaft, with cantilevered floor plates. This approach creates an open space with a free plan on a limited site, while the additional volume appears to float above, contrasting with the original building below.
+                            <br><br>The project's vision is to evoke the "ghost" of the original building, rekindling memories of St. Louis's gold en age. The new design simplifies the structure to three columns and an elevator shaft, with cantilevered floor plates. This approach creates an open space with a free plan on a limited site, while the additional volume appears to float above, contrasting with the original building below.
                             
-                            <br><br>The preserved portion of the building will serve as a public space, featuring a front desk, auditorium, and a rooftop garden. The new addition will function as a private area, offering adaptable workspaces designed to cater to various industries and encourage employees to return to the office in the post-pandemic era. The first four floors of the addition will provide more individualized workspaces, while the upper three floors will have an open plan with flexible furniture layouts to support collaborative work. Each floor will feature break spaces on a mezzanine near the scissor stairwell, fostering spontaneous interactions in the workplace.</p>
+                            <br><br>The preserved portion of the building will serve as a public space, featuring a front desk, auditorium, and a rooftop garden. 
+                            The new addition will function as a private area, offering adaptable workspaces designed to cater to various industries and encourage employees to return to the office in the post-pandemic era. 
+                            The first four floors of the addition will provide more individualized workspaces, while the upper three floors will have an open plan with flexible furniture layouts to support collaborative work. 
+                            Each floor will feature break spaces on a mezzanine near the scissor stairwell, fostering spontaneous interactions in the workplace.</p>
                         </div>
                     </div>
                 </div>
@@ -102,17 +101,15 @@
             <span onclick="closeInfoPanel()" style="position: absolute; top: 50%; right: 20px; transform: translateY(-50%); cursor: pointer; color: black;">&times;</span>
         </div>
 
-
-
-    <div style="display: flex; overflow-x: auto; overflow-y: hidden; height: 90vh; justify-content: flex-start; align-items: center; " onwheel="event.preventDefault(); this.scrollLeft += event.deltaY;">
-        <img src="221200_Columbia-Office/01_Yione_Columbia-Office_Site.jpg" style="height: 50%; object-fit: contain; margin: 5rem">
-        <img src="221200_Columbia-Office/02_Yione_Columbia-Office_Exterior.jpg" style="height: 100%; object-fit: contain; margin: 10rem">
-        <img src="221200_Columbia-Office/04_Yione_Columbia-Office_Exterior.jpg" style="height: 75%; object-fit: contain; margin-left:10rem; margin-right: 5rem">
-        <img src="221200_Columbia-Office/03_Yione_Columbia-Office_Exterior.jpg" style="height: 75%; object-fit: contain;  margin-left:5rem; margin-right: 10rem">
-        <img src="221200_Columbia-Office/06_Yione_Columbia-Office_Interior.jpg" style="height: 60%; object-fit: contain;  margin-left:10rem; margin-right: 5rem">
-        <img src="221200_Columbia-Office/05_Yione_Columbia-Office_Interior.jpg" style="height: 60%; object-fit: contain;  margin-left:5rem; margin-right: 10rem">
-        <img src="221200_Columbia-Office/07_Yione_Columbia-Office_Structure.jpg" style="height: 100%; object-fit: contain;  margin-left:5rem">
-    </div>
+        <div style="display: flex; overflow-x: auto; overflow-y: hidden; flex: 1; justify-content: flex-start; align-items: center;" onwheel="event.preventDefault(); this.scrollLeft += event.deltaY;">
+            <img src="221200_Columbia-Office/01_Yione_Columbia-Office_Site.jpg" style="height: 50vh; object-fit: contain; margin: 5rem">
+            <img src="221200_Columbia-Office/02_Yione_Columbia-Office_Exterior.jpg" style="height: 80vh; object-fit: contain; margin: 10rem">
+            <img src="221200_Columbia-Office/04_Yione_Columbia-Office_Exterior.jpg" style="height: 70vh; object-fit: contain; margin-left:10rem; margin-right: 5rem">
+            <img src="221200_Columbia-Office/03_Yione_Columbia-Office_Exterior.jpg" style="height: 70vh; object-fit: contain; margin-left:5rem; margin-right: 10rem">
+            <img src="221200_Columbia-Office/06_Yione_Columbia-Office_Interior.jpg" style="height: 60vh; object-fit: contain; margin-left:10rem; margin-right: 5rem">
+            <img src="221200_Columbia-Office/05_Yione_Columbia-Office_Interior.jpg" style="height: 60vh; object-fit: contain; margin-left:5rem; margin-right: 10rem">
+            <img src="221200_Columbia-Office/07_Yione_Columbia-Office_Structure.jpg" style="height: 80vh; object-fit: contain; margin-left:5rem">
+        </div>
         </main>
 
         <footer class="project-footer">

@@ -86,9 +86,37 @@ html {
 body.dark-mode .container li a{
     color: white;
 }
+body.project-page {
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-page hr {
+    height: 1px; /* Thickness of the line */
+    background: #000; /* Color of the line */
+    margin: 1rem; /* Space above and below the line */
+}
+
+.project-page main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+
+}
 
 body.dark-mode {
     background-color: black;
 }
 
+body.dark-mode a{
+    color: white;
+}
+
+body.light-mode { 
+    background-color: #e0e0e0;
+
+}
 
