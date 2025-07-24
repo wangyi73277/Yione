@@ -18,4 +18,16 @@ function setupHoverModeToggle() {
       });
     });
   }
+
+  function setDarkMode(isDark) {
+    if (isDark) {
+      document.body.classList.add('dark-mode');
+      document.querySelector('.light-mode-logo').style.display = 'none';
+      document.querySelector('.dark-mode-logo').style.display = 'inline';
+    } else {
+      document.body.classList.remove('dark-mode');
+      document.querySelector('.light-mode-logo').style.display = 'inline'; 
+      document.querySelector('.dark-mode-logo').style.display = 'none';
+    }
+  }
   
