@@ -75,7 +75,7 @@ body.light-mode {
 }
 
   .info-panel {
-    display: flex;
+    display: inline-flex;
     justify-content: space-between;
     position: fixed;
     bottom: 25px;
