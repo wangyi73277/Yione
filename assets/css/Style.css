@@ -59,7 +59,7 @@ html {
     pointer-events: none; /* Allow scrolling through the modal */
     display: none; 
     position: fixed; 
-    top: 12%; 
+    top: 100px; 
     left: 20px; 
     width: 100%; 
     height: 100%; 
