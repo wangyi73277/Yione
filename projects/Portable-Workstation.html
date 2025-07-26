@@ -56,41 +56,39 @@
 
         <main>
             <div class="info-panel" id="info-panel">
-                <div class="row">
-                    <div class="col-6">
-                        <p>Portable Workstation</p>
-                    </div>
-                    <div class="col-3">
-                        <p><a href="#" onclick="showInfo()" style="color: black; text-decoration: none;">info</a></p>
-                        <div id="infoModal" class="modal" style="display: none; float:left; top: 12%; left: 20px; width: 100%; height: 100%; z-index: 2000;">
-                            <div class="modal-content" style="background-color: rgba(224, 224, 224, 0.6); border: 0px; margin:0; padding: 20px; width: 100%; max-width: 400px; border-radius: 5px;">
-                                <span onclick="closeInfo()" style="float: right; cursor: pointer; text-align: right;">&times;</span>
-                                
-                                <p>Status: Field tested<br>
-                                <hr>
-                                Year: 2022<br>
-                                <hr>
-                                Type: HoloLens XR</p>
-                                
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-3">
-                        <p><a href="#" onclick="showStory()" style="color: black; text-decoration: none;">story</a></p>
-                        <div id="storyModal" class="modal" style="display: none; float:left; top: 12%; left: 20px; width: 100%; height: 100%; z-index: 2000;">
-                            <div class="modal-content" style="background-color: rgba(224, 224, 224, 0.6); border: 0px; margin:0; padding: 20px; width: 100%; max-width: 400px; border-radius: 5px;">
-                                <span onclick="closeStory()" style="float: right; cursor: pointer; text-align: right;">&times;</span>
-                                
-                                <p>Architecture thrives when designers are fully attuned to the living context of a project. Yet conventional practice—from site photographs and surveys to studio-bound sketches and CAD models—unwittingly funnels away this richness. Each linear step abstracts and confines the holistic context, leaving architecture trapped in static coordinates and rigid workflows.
-
-                                <br><br>In response, we envision a more fluid and empathetic approach. We introduce Portable Workstation, a mixed-reality tool for Microsoft HoloLens2 that transforms the architect’s workspace into an immersive memory palace where personal knowledge and project context interweave fluidly. In this augmented environment, digital notes, site data, and design tools surround the architect on site, ready to be summoned at any moment of inspiration. The architect thus engages in an embodied spatial practice that blurs the boundaries of where, when, and how design can happen, thereby dissolving the discontinuity of the conventional desk-bound workflow. In this poetic confluence of digital and physical realms, the design process becomes a continuous act of attunement—fluid, responsive, and deeply aligned with its environment.
-                                
-                            </p>
-                            </div>
+                <div class="col-6">
+                    <p>Portable Workstation</p>
+                </div>
+                <div class="col-3">
+                    <p><a href="#" onclick="showInfo()">info</a></p>
+                    <div id="infoModal" class="modal">
+                        <div class="modal-content">
+                            <span onclick="closeInfo()" class="close-btn">&times;</span>
+                            
+                            <p>Status: Field tested<br>
+                            <hr>
+                            Year: 2022<br>
+                            <hr>
+                            Type: HoloLens XR</p>
+                            
                         </div>
                     </div>
                 </div>
-                <span onclick="closeInfoPanel()" style="position: absolute; top: 50%; right: 20px; transform: translateY(-50%); cursor: pointer; color: black;">&times;</span>
+                <div class="col-3">
+                    <p><a href="#" onclick="showStory()">story</a></p>
+                    <div id="storyModal" class="modal">
+                        <div class="modal-content">
+                            <span onclick="closeStory()" class="close-btn">&times;</span>
+                            
+                            <p>Architecture thrives when designers are fully attuned to the living context of a project. Yet conventional practice—from site photographs and surveys to studio-bound sketches and CAD models—unwittingly funnels away this richness. Each linear step abstracts and confines the holistic context, leaving architecture trapped in static coordinates and rigid workflows.
+
+                            <br><br>In response, we envision a more fluid and empathetic approach. We introduce Portable Workstation, a mixed-reality tool for Microsoft HoloLens2 that transforms the architect’s workspace into an immersive memory palace where personal knowledge and project context interweave fluidly. In this augmented environment, digital notes, site data, and design tools surround the architect on site, ready to be summoned at any moment of inspiration. The architect thus engages in an embodied spatial practice that blurs the boundaries of where, when, and how design can happen, thereby dissolving the discontinuity of the conventional desk-bound workflow. In this poetic confluence of digital and physical realms, the design process becomes a continuous act of attunement—fluid, responsive, and deeply aligned with its environment.
+                            
+                        </p>
+                        </div>
+                    </div>
+                </div>
+                <span onclick="closeInfoPanel()" class="close-btn">&times;</span>
             </div>
             <div style="display: flex; overflow-x: auto; overflow-y: hidden; height: 90vh; justify-content: flex-start; align-items: center; " onwheel="event.preventDefault(); this.scrollLeft += event.deltaY;">
                 <img src="220501_Portable-Workstation\01_Yione_Portable-Workstation.png" style="height: 60%; object-fit: contain; margin: 10rem;">

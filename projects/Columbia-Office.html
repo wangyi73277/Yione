@@ -55,45 +55,43 @@
 
         <main>
             <div class="info-panel" id="info-panel">
-                <div class="row">
-                    <div class="col-6">
-                    <p>Columbia Office</p>
-                </div>
+                <div>
+                <p>Columbia Office</p>
+            </div>
 
-                <div class="col-3">
-                    <p><a href="#" onclick="showInfo()">info</a></p>
-                    <div id="infoModal" class="modal" >
-                        <div class="modal-content">
-                            <span onclick="closeInfo()" style="float: right; cursor: pointer; text-align: right;">&times;</span>
-                            
-                            <p>Location: St. Louis, Missouri<br>
-                            <hr>
-                            Year: 2023<br>
-                            <hr>
-                            Type: Office</p>
-                            
-                        </div>
-                    </div>
-                </div>
-                <div class="col-3">
-                    <p><a href="#" onclick="showStory()" style="color: black; text-decoration: none;">story</a></p>
-                    <div id="storyModal" class="modal">
-                        <div class="modal-content">
-                            <span onclick="closeStory()" style="float: right; cursor: pointer; text-align: right;">&times;</span>
-                            
-                            <p class="story-text">The Columbia Building was a nine-story Romanesque-style structure located at the southeast corner of 8th and Locust Streets in Downtown St. Louis. Its name, the Columbia Building, originates from its completion in 1892, marking 400 years since Christopher Columbus's arrival in North America. Designed by architect Isaac Taylor, who housed his office on the 9th floor, the building was once a significant landmark. As the city faced economic decline, many developers opted to demolish unprofitable architectural monuments. However, in 1976, the owners of the Columbia Building chose to truncate its upper floors, leaving behind a two-story storefront box that still stands today. This preserved section offers a glimpse into the grandeur of the original structure.
-
-                            <br><br>The project's vision is to evoke the "ghost" of the original building, rekindling memories of St. Louis's gold en age. The new design simplifies the structure to three columns and an elevator shaft, with cantilevered floor plates. This approach creates an open space with a free plan on a limited site, while the additional volume appears to float above, contrasting with the original building below.
-                            
-                            <br><br>The preserved portion of the building will serve as a public space, featuring a front desk, auditorium, and a rooftop garden. 
-                            The new addition will function as a private area, offering adaptable workspaces designed to cater to various industries and encourage employees to return to the office in the post-pandemic era. 
-                            The first four floors of the addition will provide more individualized workspaces, while the upper three floors will have an open plan with flexible furniture layouts to support collaborative work. 
-                            Each floor will feature break spaces on a mezzanine near the scissor stairwell, fostering spontaneous interactions in the workplace.</p>
-                        </div>
+            <div>
+                <p><a href="#" onclick="showInfo()">info</a></p>
+                <div id="infoModal" class="modal" >
+                    <div class="modal-content">
+                        <span onclick="closeInfo()" class="close-btn">&times;</span>
+                        
+                        <p>Location: St. Louis, Missouri<br>
+                        <hr>
+                        Year: 2023<br>
+                        <hr>
+                        Type: Office</p>
+                        
                     </div>
                 </div>
             </div>
-            <span onclick="closeInfoPanel()" style="position: absolute; top: 50%; right: 20px; transform: translateY(-50%); cursor: pointer; color: black;">&times;</span>
+            <div>
+                <p><a href="#" onclick="showStory()">story</a></p>
+                <div id="storyModal" class="modal">
+                    <div class="modal-content">
+                        <span onclick="closeStory()" class="close-btn">&times;</span>
+                        
+                        <p class="story-text">The Columbia Building was a nine-story Romanesque-style structure located at the southeast corner of 8th and Locust Streets in Downtown St. Louis. Its name, the Columbia Building, originates from its completion in 1892, marking 400 years since Christopher Columbus's arrival in North America. Designed by architect Isaac Taylor, who housed his office on the 9th floor, the building was once a significant landmark. As the city faced economic decline, many developers opted to demolish unprofitable architectural monuments. However, in 1976, the owners of the Columbia Building chose to truncate its upper floors, leaving behind a two-story storefront box that still stands today. This preserved section offers a glimpse into the grandeur of the original structure.
+
+                        <br><br>The project's vision is to evoke the "ghost" of the original building, rekindling memories of St. Louis's gold en age. The new design simplifies the structure to three columns and an elevator shaft, with cantilevered floor plates. This approach creates an open space with a free plan on a limited site, while the additional volume appears to float above, contrasting with the original building below.
+                        
+                        <br><br>The preserved portion of the building will serve as a public space, featuring a front desk, auditorium, and a rooftop garden. 
+                        The new addition will function as a private area, offering adaptable workspaces designed to cater to various industries and encourage employees to return to the office in the post-pandemic era. 
+                        The first four floors of the addition will provide more individualized workspaces, while the upper three floors will have an open plan with flexible furniture layouts to support collaborative work. 
+                        Each floor will feature break spaces on a mezzanine near the scissor stairwell, fostering spontaneous interactions in the workplace.</p>
+                    </div>
+                </div>
+            </div>
+            <span onclick="closeInfoPanel()" class="close-btn">&times;</span>
         </div>
 
         <div style="display: flex; overflow-x: auto; overflow-y: hidden; flex: 1; justify-content: flex-start; align-items: center;" onwheel="event.preventDefault(); this.scrollLeft += event.deltaY;">

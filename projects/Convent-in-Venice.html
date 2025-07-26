@@ -50,45 +50,43 @@
 
         <main>
             <div class="info-panel" id="info-panel">
-                <div class="row">
-                    <div class="col-6">
-                        <p>Convent in Venice</p>
-                    </div>
-                    <div class="col-3">
-                        <p><a href="#" onclick="showInfo()" style="color: black; text-decoration: none;">info</a></p>
-                        <div id="infoModal" class="modal">
-                            <div class="modal-content">
-                                <span onclick="closeInfo()" style="float: right; cursor: pointer; text-align: right;">&times;</span>
-                                
-                                <p>Location: Venice, Italy<br>
-                                <hr>
-                                Year: 2020<br>
-                                <hr>
-                                Type: Convent</p>
-                                
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-3">
-                        <p><a href="#" onclick="showStory()" style="color: black; text-decoration: none;">story</a></p>
-                        <div id="storyModal" class="modal">
-                            <div class="modal-content">
-                                <span onclick="closeStory()" style="float: right; cursor: pointer; text-align: right;">&times;</span>
-                                
-                                <p>The Vertical Convent in Venice provides a residence, study and workplace for religious sisters, while simultaneously offering spaces for visitor engagement. The architectural program thoughtfully mirrors the structured daily routines of the sisters, which revolve around prayer, contemplation, and work. Natural light is precisely carved into each space, illuminating interiors at the specific times of day when they are in use. Material selections pay homage to traditional convent typologies and reflect the distinction between public and private functions.
-
-                                <br><br>The first three levels, openly accessible and integrated within the urban context, accommodate public monastic functions--a chapel, school, and daycare--firmly rooting the convent within the community fabric.
-                                
-                                <br><br>Above these communal levels, private monastic spaces ascend in striking contrast. These elevated areas encompass the sisters’ cells, cloister, refectory, library, choir, a private chapel dedicated solely to the sisters, a chapter house, and a colloquium. Typically arranged horizontally in traditional convent layouts, these spaces are innovatively reorganized into a vertical composition.
-
-                                <br><br>This design strategy transforms the convent into a “habitable axis mundi,” symbolizing a profound connection between earth and heaven. By elevating the private, contemplative areas, the architecture both symbolically and physically directs spiritual pursuits toward the heavens, redefining the traditional convent layout into a contemporary, vertical expression.
-                                
-                            </p>
-                            </div>
+                <div>
+                    <p>Convent in Venice</p>
+                </div>
+                <div>
+                    <p><a href="#" onclick="showInfo()">info</a></p>
+                    <div id="infoModal" class="modal">
+                        <div class="modal-content">
+                            <span onclick="closeInfo()" class="close-btn">&times;</span>
+                            
+                            <p>Location: Venice, Italy<br>
+                            <hr>
+                            Year: 2020<br>
+                            <hr>
+                            Type: Convent</p>
+                            
                         </div>
                     </div>
                 </div>
-                <span onclick="closeInfoPanel()" style="position: absolute; top: 50%; right: 20px; transform: translateY(-50%); cursor: pointer; color: black;">&times;</span>
+                <div>
+                    <p><a href="#" onclick="showStory()">story</a></p>
+                    <div id="storyModal" class="modal">
+                        <div class="modal-content">
+                            <span onclick="closeStory()" class="close-btn">&times;</span>
+                            
+                            <p>The Vertical Convent in Venice provides a residence, study and workplace for religious sisters, while simultaneously offering spaces for visitor engagement. The architectural program thoughtfully mirrors the structured daily routines of the sisters, which revolve around prayer, contemplation, and work. Natural light is precisely carved into each space, illuminating interiors at the specific times of day when they are in use. Material selections pay homage to traditional convent typologies and reflect the distinction between public and private functions.
+
+                            <br><br>The first three levels, openly accessible and integrated within the urban context, accommodate public monastic functions--a chapel, school, and daycare--firmly rooting the convent within the community fabric.
+                            
+                            <br><br>Above these communal levels, private monastic spaces ascend in striking contrast. These elevated areas encompass the sisters’ cells, cloister, refectory, library, choir, a private chapel dedicated solely to the sisters, a chapter house, and a colloquium. Typically arranged horizontally in traditional convent layouts, these spaces are innovatively reorganized into a vertical composition.
+
+                            <br><br>This design strategy transforms the convent into a “habitable axis mundi,” symbolizing a profound connection between earth and heaven. By elevating the private, contemplative areas, the architecture both symbolically and physically directs spiritual pursuits toward the heavens, redefining the traditional convent layout into a contemporary, vertical expression.
+                            
+                        </p>
+                        </div>
+                    </div>
+                </div>
+                <span onclick="closeInfoPanel()" class="close-btn">&times;</span>
             </div>
 
             <div style="display: flex; overflow-x: auto; overflow-y: hidden; height: 90vh; justify-content: flex-start; align-items: center; " onwheel="event.preventDefault(); this.scrollLeft += event.deltaY;">

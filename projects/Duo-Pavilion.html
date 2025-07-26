@@ -57,44 +57,44 @@
 
         <main>
             <div class="info-panel" id="info-panel">
-                <div class="row">
-                    <div class="col-6">
-                        <p>Duo Pavilion</p>
-                    </div>
-                    <div class="col-3">
-                        <p><a href="#" onclick="showInfo()" style="color: black; text-decoration: none;">info</a></p>
-                        <div id="infoModal" class="modal" style="display: none; float:left; top: 12%; left: 20px; width: 100%; height: 100%; z-index: 2000;">
-                            <div class="modal-content" style="background-color: rgba(224, 224, 224, 0.6); border: 0px; margin:0; padding: 20px; width: 100%; max-width: 400px; border-radius: 5px;">
-                                <span onclick="closeInfo()" style="float: right; cursor: pointer; text-align: right;">&times;</span>
-                                
-                                <p>Location: East St. Louis, Illinois<br>
-                                <hr>
-                                Year: 2022<br>
-                                <hr>
-                                Type: Pavilion</p>
-                                
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-3">
-                        <p><a href="#" onclick="showStory()" style="color: black; text-decoration: none;">story</a></p>
-                        <div id="storyModal" class="modal" style="display: none; float:left; top: 12%; left: 20px; width: 100%; height: 100%; z-index: 2000;">
-                            <div class="modal-content" style="background-color: rgba(224, 224, 224, 0.6); border: 0px; margin:0; padding: 20px; width: 100%; max-width: 400px; border-radius: 5px;">
-                                <span onclick="closeStory()" style="float: right; cursor: pointer; text-align: right;">&times;</span>
-                                
-                                <p>In the heart of East St. Louis, where the North Pump Station whispers tales of serene waters and untamed landscapes, an architectural marvel begins to unfold. This place, where peace is often shattered by the rumbling of machinery, holds an unspoken tension, a dance of calm and chaos.
 
-                                <br><br>Amidst this duality stands the station, a tale of two structures. One, a robust concrete giant, tirelessly channels the water’s flow. The other, a brick sentinel with windows that never see, awakens only when floods stir.
-                                
-                                <br><br>It’s here, in this juxtaposition of conflict and harmony, that the design finds its voice. A quartet of spaces emerges: a reading room and a meditation room, nestled in a pavilion; a yoga house and a retreat, perched upon a bridge. Each space, a world unto itself, remains distinct within its walls, a deliberate choice that weaves isolation into the design’s fabric.
-                                
-                                <br><br>Paths carve through the landscape, telling their own stories. The south path, open and inviting, leads to the public realms of reading and yoga. In contrast, the north path, more secluded, guides to the private sanctuaries of meditation and retreat. Here, in this architectural narrative, the tension of the site is not just observed but experienced, a symphony of spaces where harmony and discord coexist.
-                            </p>
-                            </div>
+                <div >
+                    <p>Duo Pavilion</p>
+                </div>
+                <div >
+                    <p><a href="#" onclick="showInfo()">info</a></p>
+                    <div id="infoModal" class="modal">
+                        <div class="modal-content">
+                            <span onclick="closeInfo()" class="close-btn">&times;</span>
+                            
+                            <p>Location: East St. Louis, Illinois<br>
+                            <hr>
+                            Year: 2022<br>
+                            <hr>
+                            Type: Pavilion</p>
+                            
                         </div>
                     </div>
                 </div>
-                <span onclick="closeInfoPanel()" style="position: absolute; top: 50%; right: 20px; transform: translateY(-50%); cursor: pointer; color: black;">&times;</span>
+                <div >
+                    <p><a href="#" onclick="showStory()">story</a></p>
+                    <div id="storyModal" class="modal">
+                        <div class="modal-content" >
+                            <span onclick="closeStory()">&times;</span>
+                            
+                            <p>In the heart of East St. Louis, where the North Pump Station whispers tales of serene waters and untamed landscapes, an architectural marvel begins to unfold. This place, where peace is often shattered by the rumbling of machinery, holds an unspoken tension, a dance of calm and chaos.
+
+                            <br><br>Amidst this duality stands the station, a tale of two structures. One, a robust concrete giant, tirelessly channels the water’s flow. The other, a brick sentinel with windows that never see, awakens only when floods stir.
+                            
+                            <br><br>It’s here, in this juxtaposition of conflict and harmony, that the design finds its voice. A quartet of spaces emerges: a reading room and a meditation room, nestled in a pavilion; a yoga house and a retreat, perched upon a bridge. Each space, a world unto itself, remains distinct within its walls, a deliberate choice that weaves isolation into the design’s fabric.
+                            
+                            <br><br>Paths carve through the landscape, telling their own stories. The south path, open and inviting, leads to the public realms of reading and yoga. In contrast, the north path, more secluded, guides to the private sanctuaries of meditation and retreat. Here, in this architectural narrative, the tension of the site is not just observed but experienced, a symphony of spaces where harmony and discord coexist.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <span onclick="closeInfoPanel()" class="close-btn">&times;</span>
             </div>
 
             <div style="display: flex; overflow-x: auto; overflow-y: hidden; height: 90vh; justify-content: flex-start; align-items: center; " onwheel="event.preventDefault(); this.scrollLeft += event.deltaY;">

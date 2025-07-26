@@ -56,39 +56,37 @@
 
         <main>
             <div class="info-panel" id="info-panel">
-                <div class="row">
-                    <div class="col-6">
-                        <p>Macbeth of Zerg</p>
-                    </div>
-                    <div class="col-3">
-                        <p><a href="#" onclick="showInfo()" style="color: black; text-decoration: none;">info</a></p>
-                        <div id="infoModal" class="modal" style="display: none; float:left; top: 12%; left: 20px; width: 100%; height: 100%; z-index: 2000;">
-                            <div class="modal-content" style="background-color: rgba(224, 224, 224, 0.6); border: 0px; margin:0; padding: 20px; width: 100%; max-width: 400px; border-radius: 5px;">
-                                <span onclick="closeInfo()" style="float: right; cursor: pointer; text-align: right;">&times;</span>
-                                
-                                Year: 2022<br>
-                                <hr>
-                                Technologies: RunwayML, Photogrammetry, Google Colab, zBrush</p>
-                                
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-3">
-                        <p><a href="#" onclick="showStory()" style="color: black; text-decoration: none;">story</a></p>
-                        <div id="storyModal" class="modal" style="display: none; float:left; top: 12%; left: 20px; width: 100%; height: 100%; z-index: 2000;">
-                            <div class="modal-content" style="background-color: rgba(224, 224, 224, 0.6); border: 0px; margin:0; padding: 20px; width: 100%; max-width: 400px; border-radius: 5px;">
-                                <span onclick="closeStory()" style="float: right; cursor: pointer; text-align: right;">&times;</span>
-                                
-                                <p>Machine learning engages graphic information differently than designers do. All fidelity towards visual, cultural, political, and geometrical context/agenda is lost, resulting in a new class of compositions that are unique but not critical. This project serves as an introduction to the possibilities that machine learning can bring to a design workflow. The systems, primarily Generative Adversarial Networks (GANs) and Convolutional Neural Networks (CNNs), are explored with input images and analyzed as output images. These outputs, while biased by the Designer’s inputs, lack any affinity towards meaning or aesthetic. The designer’s role extends to that of a critic who identifies the output images that add value to the designer’s intent or exposes them to new spatial relationships while also learning to dismiss the inherent tropes of machine learning.
-
-                                <br><br>The project “Macbeth of Zerg” combine two patterns style, Rococo and Machine language of the database, and applies the stage design process to the three iterations. The three iterations(Scenes) reflect the witches’ foretelling, Macbeth’s crown, and death.
-                                
-                            </p>
-                            </div>
-                        </div>
+            <div>
+                <p>Macbeth of Zerg</p>
+            </div>
+            <div>
+                <p><a href="#" onclick="showInfo()">info</a></p>
+                <div id="infoModal" class="modal">
+                    <div class="modal-content">
+                        <span onclick="closeInfo()" class="close-btn">&times;</span>
+                        
+                        Year: 2022<br>
+                        <hr>
+                        Technologies: RunwayML, Photogrammetry, Google Colab, zBrush</p>
+                        
                     </div>
                 </div>
-                <span onclick="closeInfoPanel()" style="position: absolute; top: 50%; right: 20px; transform: translateY(-50%); cursor: pointer; color: black;">&times;</span>
+            </div>
+            <div>
+                <p><a href="#" onclick="showStory()">story</a></p>
+                <div id="storyModal" class="modal">
+                    <div class="modal-content">
+                        <span onclick="closeStory()" class="close-btn">&times;</span>
+                        
+                        <p>Machine learning engages graphic information differently than designers do. All fidelity towards visual, cultural, political, and geometrical context/agenda is lost, resulting in a new class of compositions that are unique but not critical. This project serves as an introduction to the possibilities that machine learning can bring to a design workflow. The systems, primarily Generative Adversarial Networks (GANs) and Convolutional Neural Networks (CNNs), are explored with input images and analyzed as output images. These outputs, while biased by the Designer’s inputs, lack any affinity towards meaning or aesthetic. The designer’s role extends to that of a critic who identifies the output images that add value to the designer’s intent or exposes them to new spatial relationships while also learning to dismiss the inherent tropes of machine learning.
+
+                        <br><br>The project “Macbeth of Zerg” combine two patterns style, Rococo and Machine language of the database, and applies the stage design process to the three iterations. The three iterations(Scenes) reflect the witches’ foretelling, Macbeth’s crown, and death.
+                        
+                    </p>
+                    </div>
+                </div>
+            </div>
+            <span onclick="closeInfoPanel()" class="close-btn">&times;</span>
             </div>
 
 
