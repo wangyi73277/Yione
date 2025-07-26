@@ -91,13 +91,7 @@ body.light-mode {
     z-index: 1000;
 }
 
-@media (max-width: 768px) {
-    .info-panel {
-        width: 90%;
-        bottom: 15px;
-        padding: 15px;
-    }
-}
+
 
 #info-panel p {
     color: black;
@@ -141,7 +135,17 @@ body.light-mode {
     max-width: 400px; 
     border-radius: 5px;
 }
-
+@media (max-width: 768px) {
+    .info-panel {
+        width: 90%;
+        bottom: 15px;
+        padding: 15px;
+    }
+    .modal-content { 
+        width: 90%; 
+        z-index: 2000;
+    }
+}
 .close-btn {
     float:right;
     top: 5px;
