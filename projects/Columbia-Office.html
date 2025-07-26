@@ -19,12 +19,6 @@
         <style>
             .hidden { display: none; }
 
-            .modal {
-                pointer-events: none; /* Allow scrolling through the modal */
-            }
-            .modal-content {
-                pointer-events: auto; /* Re-enable interactions for modal content */
-            }
             .story-text {
                 text-overflow: scroll;
             }
@@ -65,10 +59,11 @@
                     <div class="col-6">
                     <p>Columbia Office</p>
                 </div>
+
                 <div class="col-3">
-                    <p><a href="#" onclick="showInfo()" style="color: black; text-decoration: none;">info</a></p>
-                    <div id="infoModal" class="modal" style="display: none; float:left; top: 12%; left: 20px; width: 100%; height: 100%; z-index: 2000;">
-                        <div class="modal-content" style="background-color: rgba(224, 224, 224, 0.6); border: 0px; margin:0; padding: 20px; width: 100%; max-width: 400px; border-radius: 5px;">
+                    <p><a href="#" onclick="showInfo()">info</a></p>
+                    <div id="infoModal" class="modal" >
+                        <div class="modal-content">
                             <span onclick="closeInfo()" style="float: right; cursor: pointer; text-align: right;">&times;</span>
                             
                             <p>Location: St. Louis, Missouri<br>
@@ -82,8 +77,8 @@
                 </div>
                 <div class="col-3">
                     <p><a href="#" onclick="showStory()" style="color: black; text-decoration: none;">story</a></p>
-                    <div id="storyModal" class="modal" style="display: none; float:left; top: 12%; left: 20px; width: 100%; height: 100%; z-index: 2000;">
-                        <div class="modal-content" style="background-color: rgba(224, 224, 224, 0.6); border: 0px; margin:0; padding: 20px; width: 100%; max-width: 400px; border-radius: 5px;">
+                    <div id="storyModal" class="modal">
+                        <div class="modal-content">
                             <span onclick="closeStory()" style="float: right; cursor: pointer; text-align: right;">&times;</span>
                             
                             <p class="story-text">The Columbia Building was a nine-story Romanesque-style structure located at the southeast corner of 8th and Locust Streets in Downtown St. Louis. Its name, the Columbia Building, originates from its completion in 1892, marking 400 years since Christopher Columbus's arrival in North America. Designed by architect Isaac Taylor, who housed his office on the 9th floor, the building was once a significant landmark. As the city faced economic decline, many developers opted to demolish unprofitable architectural monuments. However, in 1976, the owners of the Columbia Building chose to truncate its upper floors, leaving behind a two-story storefront box that still stands today. This preserved section offers a glimpse into the grandeur of the original structure.
