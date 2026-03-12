@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Yione</title>
+        <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../assets/css/Style.css">
+        <link rel="icon" href="/Logo/favicon.ico" type="image/x-icon">
+        <meta name="description" content="Macbeth of Zerg is a project that explores the use of machine learning to generate images of Macbeth.">
+        <meta name="robots" content="index, follow">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta name="copyright" content="© 2025 Yione Studio. All rights reserved.">
+        <meta name="og:title" content="Macbeth of Zerg">
+        <meta name="og:description" content="Macbeth of Zerg is a project that explores the use of machine learning to generate images of Macbeth.">
+        <meta name="og:image" content="projects\221210_Macbeth-of-Zerg\00_Yione_Macbeth-of-Zerg_Thumbnail.jpg">
+        <meta name="og:url" content="https://www.yione.org/projects/Odyssey-to-Fruity-City.html">
+        <meta name="og:site_name" content="Yione Studio">
+        <meta name="og:type" content="website">
+        <meta name="og:locale" content="en_US">
+        <style>
+            .hidden { display: none; }
+
+            .modal {
+                pointer-events: none; /* Allow scrolling through the modal */
+            }
+            .modal-content {
+                pointer-events: auto; /* Re-enable interactions for modal content */
+            }
+        </style>
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-RZ3T490TYM"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-RZ3T490TYM');
+        </script>
+    </head>
+
+    <body class="project-page dark-mode">  
+        <header>
+            <nav>
+                <ul class="nav-list">
+                    <li><a href="#">Yione Studio</a></li>
+                    <li class="dropdown">
+                        <a href="../index.html" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                            <img src="/Logo/Logo_white.png" width="60" height="60" alt="Yione" class="logo">
+                            <br>Works
+                        </a>
+                    </li>
+                    <li class="about">
+                        <a href="../About.html">About</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <div class="info-panel" id="info-panel">
+                <div class="col-6">
+                    <p>Odyssey to Peter Cook's Fruity City</p>
+                </div>
+                <div class="col-3">
+                <p><a href="#" onclick="showInfo()">info</a></p>
+                <div id="infoModal" class="modal">
+                    <div class="modal-content">
+                        <span onclick="closeInfo()" class="close-btn">&times;</span>
+                        
+                        <p>
+                        Year: 2026<br>
+                        <hr>
+                        Type: Short Film<br>
+                        <hr>
+                        Technologies: AI Content Generation with Midjourney, Gemini, and Kling AI
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <p><a href="#" onclick="showStory()">Synopsis</a></p>
+                <div id="storyModal" class="modal">
+                    <div class="modal-content">
+                        <span onclick="closeStory()" class="close-btn">&times;</span>
+                        
+                        <p>Machine learning engages graphic information differently than designers do. All fidelity towards visual, cultural, political, and geometrical context/agenda is lost, resulting in a new class of compositions that are unique but not critical. This project serves as an introduction to the possibilities that machine learning can bring to a design workflow. The systems, primarily Generative Adversarial Networks (GANs) and Convolutional Neural Networks (CNNs), are explored with input images and analyzed as output images. These outputs, while biased by the Designer’s inputs, lack any affinity towards meaning or aesthetic. The designer’s role extends to that of a critic who identifies the output images that add value to the designer’s intent or exposes them to new spatial relationships while also learning to dismiss the inherent tropes of machine learning.
+
+                        <br><br>The project “Macbeth of Zerg” combine two patterns style, Rococo and Machine language of the database, and applies the stage design process to the three iterations. The three iterations(Scenes) reflect the witches’ foretelling, Macbeth’s crown, and death.
+                        
+                    </p>
+                    </div>
+                </div>
+            </div>
+            <span onclick="closeInfoPanel()" class="close-btn">&times;</span>
+            </div>
+
+
+
+            <div style="display: flex; justify-content: center;">
+                <video width="640" height="640" controls>
+                    <source src="260300_Odyssey-to-Fruity-City/Odyssey-to-Peter-Cook's-Fruity-City.mp4" type="video/mp4">
+                </video>
+            </div>
+        </main>
+        <footer class="project-footer">
+            <small>© 2026 Yione Studio</small>
+        </footer>
+        <script src="../assets/js/commonUI.js"></script>
+        <script src="../assets/js/main.js"></script>
+        <script src="../assets/js/modeToggle.js"></script>
+        <script>
+            setDarkMode(true);
+        </script>
+    </body>
+</html>
