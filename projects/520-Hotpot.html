@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Yione</title>
+        <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../assets/css/Style.css">
+        <link rel="icon" href="/Logo/favicon.ico" type="image/x-icon">
+        <meta name="description" content="520 Hot Pot is a restaurant located in St. Louis, Missouri.">
+        <meta name="robots" content="index, follow">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta name="copyright" content="© 2025 Yione Studio. All rights reserved.">
+        <meta name="og:title" content="520 Hot Pot">
+        <meta name="og:description" content="520 Hot Pot is a restaurant located in St. Louis, Missouri.">
+        <meta name="og:image" content="projects\250600_Hotpot-Restaurant\00_Yione_520-Hotpot_Thumbnail.jpg">
+        <meta name="og:url" content="https://www.yione.org/projects/520-Hotpot.html">
+        <meta name="og:site_name" content="Yione Studio">
+        <meta name="og:type" content="website">
+        <meta name="og:locale" content="en_US">
+        <style>
+            .hidden { display: none; }
+
+            .modal {
+                pointer-events: none; /* Allow scrolling through the modal */
+            }
+            .modal-content {
+                pointer-events: auto; /* Re-enable interactions for modal content */
+            }
+
+        </style>
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-RZ3T490TYM"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-RZ3T490TYM');
+        </script>
+    </head>
+
+    <body class="project-page light-mode">  
+        <header>
+            <nav>
+                <ul class="nav-list">
+                    <li><a href="#">Yione Studio</a></li>
+                    <li class="dropdown">
+                        <a href="../index.html" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                            <img src="/Logo/Logo.png" width="60" height="60" alt="Yione" class="logo">
+                            <br>Works
+                        </a>
+                    </li>
+                    <li class="about">
+                        <a href="../About.html">About</a>
+                    </li>
+                </ul>
+            </nav>
+    </header>
+
+    <main>
+        <div class="info-panel" id="info-panel">
+            <div>
+                <p>520 Hot Pot</p>
+            </div>
+            <div >
+                <p><a href="#" onclick="showInfo()">info</a></p>
+                <div id="infoModal" class="modal">
+                    <div class="modal-content">
+                        <span onclick="closeInfo()" class="close-btn">&times;</span>
+                        <table class="info-table">
+                            <tr>
+                                <td><p>Location:</p></td>
+                                <td><p>St. Louis, Missouri</p></td>
+                            </tr>
+                            <tr>
+                                <td><p>Year:</p></td>
+                                <td><p>2025</p></td>
+                            </tr>
+                            <tr>
+                                <td><p>Type:</p></td>
+                                <td><p>Restaurant Innovation</p></td>
+                            </tr>
+                        </table>                    
+                    </div>
+                </div>
+            </div>
+            <div>
+                <p><a href="#" onclick="showStory()" style="color: black; text-decoration: none;">story</a></p>
+                <div id="storyModal" class="modal">
+                    <div class="modal-content">
+                        <span onclick="closeStory()" class="close-btn">&times;</span>
+                        
+                        <p> <i>Work in progress</i> </p>
+                        
+                    </div>
+                </div>
+            </div>
+            <span onclick="closeInfoPanel()" class="close-btn">&times;</span>
+        </div>
+        <div style="display: flex; overflow-x: auto; overflow-y: hidden; height: 90vh; justify-content: flex-start; align-items: center; " onwheel="event.preventDefault(); this.scrollLeft += event.deltaY;">
+            <img src="250600_Hotpot-Restaurant\01_Yione_520-hotpot_dining_01.jpg" style="height: 100%; object-fit: contain; margin-right: 5rem">
+            </div>
+    </main>
+
+    <footer class="project-footer">
+        <small>© 2026 Yione Studio</small>
+    </footer>
+
+    <script src="../assets/js/commonUI.js"></script>
+    </body>
+</html>
